@@ -124,7 +124,10 @@ def open_dashboard(context: BrowserContext, cookies_file: str, session_name: str
     page = context.new_page()
     page.goto("https://app.codeanywhere.com/", timeout=120000)
     log("1", f"Opened: {page.url}", "cyan")
-    page.screenshot(path="chk1.png")
+    try:
+        page.screenshot(path="chk1.png")
+    except Exception as e:
+        print(f"[debug] screenshot failed: {e}", flush=True)
     page.wait_for_timeout(2000)
 
     if _is_session_expired(page):
