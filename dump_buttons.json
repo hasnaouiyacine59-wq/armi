@@ -1,0 +1,177 @@
+[
+  {
+    "type": "submit",
+    "class": "HeaderControl_hamburger-icon-wrapper__w8GKE",
+    "text": ""
+  },
+  {
+    "type": "submit",
+    "class": "TeamDropdown_selected-team__NWtyT",
+    "text": "Personal"
+  },
+  {
+    "type": "submit",
+    "class": "HeaderProfile_avatar-wrapper__MB35F",
+    "text": "W"
+  },
+  {
+    "type": "submit",
+    "class": "subscription-button",
+    "text": "Upgrade"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_selected-option__4yDhC GitRepositoryDropdown_selected-option--expanded__4wy50",
+    "text": "Codeanywhere-Templates/empty"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/empty"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/python"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/java"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/javascript-node"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/html"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/dotnet"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/go"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/cpp"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/lamp"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/php"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/ruby"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/rust"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/typescript-node"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/base-alpine"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/base-debian"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/base-ubuntu"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/django"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/pytorch"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/tensorflow"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/jupyter"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/react-native"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/flutter"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/spring-boot"
+  },
+  {
+    "type": "button",
+    "class": "GitRepositoryDropdown_option__6yrEG",
+    "text": "Codeanywhere-Templates/mistral-ai"
+  },
+  {
+    "type": "button",
+    "class": "Button_button__dboXH Button_button--color-primary__DUSDF Button_button--variant-contained__42fXM Button_button--size-small__5nc2O",
+    "text": "Connect"
+  },
+  {
+    "type": "button",
+    "class": "Button_button__dboXH Button_button--color-secondary__hMPBd Button_button--variant-outlined__pPGOu Button_button--size-normal__DeOhr",
+    "text": "Back"
+  },
+  {
+    "type": "submit",
+    "class": "Button_button__dboXH Button_button--color-primary__DUSDF Button_button--variant-contained__42fXM Button_button--size-normal__DeOhr",
+    "text": "Continue"
+  },
+  {
+    "type": "submit",
+    "class": "DialogHeader_close-icon-wrapper__GriAB",
+    "text": ""
+  },
+  {
+    "type": "submit",
+    "class": "DrawerHeader_close-icon-wrapper__Jaeuh",
+    "text": ""
+  },
+  {
+    "type": "submit",
+    "class": "DrawerHeader_close-icon-wrapper__Jaeuh",
+    "text": ""
+  }
+]

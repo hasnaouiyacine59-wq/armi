@@ -1,0 +1,338 @@
+[
+  {
+    "tag": "HTML",
+    "id": null,
+    "class": "light",
+    "text": "/\nSetting up your workspace\nStandardize your project workspace by adding a devcontainer.json file in"
+  },
+  {
+    "tag": "HEAD",
+    "id": null,
+    "class": null,
+    "text": "\n  \n  \n  \n  \n\n  Codeanywhere\n\n  \n  \n  \n  \n/**\n * Copyright (c) 2014 The xterm.js authors. All rights"
+  },
+  {
+    "tag": "META",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "META",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "META",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "META",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "TITLE",
+    "id": null,
+    "class": null,
+    "text": "Codeanywhere"
+  },
+  {
+    "tag": "LINK",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "LINK",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "LINK",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "LINK",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "STYLE",
+    "id": null,
+    "class": null,
+    "text": "/**\n * Copyright (c) 2014 The xterm.js authors. All rights reserved.\n * Copyright (c) 2012-2013, Chr"
+  },
+  {
+    "tag": "BODY",
+    "id": null,
+    "class": null,
+    "text": "/\nSetting up your workspace\nStandardize your project workspace by adding a devcontainer.json file in"
+  },
+  {
+    "tag": "NOSCRIPT",
+    "id": null,
+    "class": null,
+    "text": "You need to enable JavaScript to run this app."
+  },
+  {
+    "tag": "DIV",
+    "id": "root",
+    "class": null,
+    "text": "/\nSetting up your workspace\nStandardize your project workspace by adding a devcontainer.json file in"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceLogs_layout-wrapper__dx8u6",
+    "text": "/\nSetting up your workspace\nStandardize your project workspace by adding a devcontainer.json file in"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceLogs_logs-wrapper__OsDWY",
+    "text": "/\nSetting up your workspace\nStandardize your project workspace by adding a devcontainer.json file in"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceLogs_header__wCJ+g",
+    "text": "/\nSetting up your workspace"
+  },
+  {
+    "tag": "IMG",
+    "id": null,
+    "class": "WorkspaceLogs_logo__7bHGu",
+    "text": null
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "SlashDivider_slash-divider__WDnAm",
+    "text": "/"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "WorkspaceLogs_top-level-message__zu6NS",
+    "text": "Setting up your workspace"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "terminals-container",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceLogs_terminal-wrapper__0WZ36 WorkspaceLogs_terminal-wrapper--first__MvzjK",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "terminal xterm",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "xterm-viewport",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "xterm-scroll-area",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "xterm-screen",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "xterm-helpers",
+    "text": null
+  },
+  {
+    "tag": "TEXTAREA",
+    "id": null,
+    "class": "xterm-helper-textarea",
+    "text": null
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "xterm-char-measure-element",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "composition-view",
+    "text": null
+  },
+  {
+    "tag": "CANVAS",
+    "id": null,
+    "class": "xterm-text-layer",
+    "text": null
+  },
+  {
+    "tag": "CANVAS",
+    "id": null,
+    "class": "xterm-selection-layer",
+    "text": null
+  },
+  {
+    "tag": "CANVAS",
+    "id": null,
+    "class": "xterm-link-layer",
+    "text": null
+  },
+  {
+    "tag": "CANVAS",
+    "id": null,
+    "class": "xterm-cursor-layer",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceLogs_terminal-wrapper__0WZ36 WorkspaceLogs_terminal-wrapper--second__m881D WorkspaceLogs_terminal-wrapper--text-hidden__oDz6l",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "terminal xterm",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "xterm-viewport",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "xterm-scroll-area",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "xterm-screen",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "xterm-helpers",
+    "text": null
+  },
+  {
+    "tag": "TEXTAREA",
+    "id": null,
+    "class": "xterm-helper-textarea",
+    "text": null
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "xterm-char-measure-element",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "composition-view",
+    "text": null
+  },
+  {
+    "tag": "CANVAS",
+    "id": null,
+    "class": "xterm-text-layer",
+    "text": null
+  },
+  {
+    "tag": "CANVAS",
+    "id": null,
+    "class": "xterm-selection-layer",
+    "text": null
+  },
+  {
+    "tag": "CANVAS",
+    "id": null,
+    "class": "xterm-link-layer",
+    "text": null
+  },
+  {
+    "tag": "CANVAS",
+    "id": null,
+    "class": "xterm-cursor-layer",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Tip_wrapper__Lb3R9",
+    "text": "Standardize your project workspace by adding a devcontainer.json file in your repo."
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Tip_text__Uy64x",
+    "text": "Standardize your project workspace by adding a devcontainer.json file in your repo."
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "Tip_link__7k3ML",
+    "text": "devcontainer.json"
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  }
+]

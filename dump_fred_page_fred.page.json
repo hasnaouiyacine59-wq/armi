@@ -1,0 +1,1568 @@
+[
+  {
+    "tag": "HTML",
+    "id": null,
+    "class": "light",
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nF\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
+  },
+  {
+    "tag": "HEAD",
+    "id": null,
+    "class": null,
+    "text": "\n  \n  \n  \n  \n  \n  \n  \n  \n  \n    window.dataLayer = window.dataLayer || [];\n    function gtag() { dat"
+  },
+  {
+    "tag": "META",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "META",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "META",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "META",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": "\n    window.dataLayer = window.dataLayer || [];\n    function gtag() { dataLayer.push(arguments); }\n "
+  },
+  {
+    "tag": "TITLE",
+    "id": null,
+    "class": null,
+    "text": "Codeanywhere"
+  },
+  {
+    "tag": "STYLE",
+    "id": null,
+    "class": null,
+    "text": "\n    .subscription-button {\n      background-color: var(--color-primary);\n      border: 1px solid va"
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": "\n    Sentry.onLoad(function () {\n      Sentry.init({\n        dsn: 'https://bc9c09515f2b190119b74cb3e"
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": "\n    function checkAndReplaceNavigation() {\n      // Find all navigation item links\n      var naviga"
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": "\n    const quotaMapping = [\n      { name: 'Free', quotaId: '00000000-0000-0000-0000-000000000000', c"
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": "\n    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g("
+  },
+  {
+    "tag": "LINK",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "LINK",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "LINK",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "LINK",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "BODY",
+    "id": null,
+    "class": null,
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nF\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
+  },
+  {
+    "tag": "NOSCRIPT",
+    "id": null,
+    "class": null,
+    "text": "You need to enable JavaScript to run this app."
+  },
+  {
+    "tag": "DIV",
+    "id": "root",
+    "class": null,
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nF\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "PageLayout_page__5ZfW5",
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nF\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
+  },
+  {
+    "tag": "HEADER",
+    "id": null,
+    "class": "Header_header__yNbCJ",
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nF"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "HeaderControl_control__Naasg",
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "HeaderControl_hamburger-icon-wrapper__w8GKE",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "HeaderControl_logo-wrapper__ciqNp",
+    "text": null
+  },
+  {
+    "tag": "IMG",
+    "id": null,
+    "class": "HeaderControl_logo__9SX-Q",
+    "text": null
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "SlashDivider_slash-divider__WDnAm",
+    "text": "/"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_team-dropdown-wrapper__zn-OS",
+    "text": "Personal\nPersonal\nFREE\nCreate team"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "TeamDropdown_selected-team__NWtyT",
+    "text": "Personal"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_team-label__aY71p TeamDropdown_nav__LIT2o",
+    "text": "Personal"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "rect",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Truncate_truncate__UooWf",
+    "text": "Personal"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_team-dropdown__1VfGO",
+    "text": "Personal\nFREE\nCreate team"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SearchInput_search-wrapper__y5beB TeamDropdown_search__ZO38M",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "INPUT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_menu__LgfzS",
+    "text": "Personal\nFREE"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_option__WC7c9 TeamDropdown_option-active__Tskzl",
+    "text": "Personal\nFREE"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_icon__wSxq5",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_team-label__aY71p",
+    "text": "Personal\nFREE"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "Tag_tag__anPxj quota-tag",
+    "text": "FREE"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_new-team-option-wrapper__foTdo",
+    "text": "Create team"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Create team"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_option__WC7c9",
+    "text": "Create team"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_icon__wSxq5",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_team-label__aY71p",
+    "text": "Create team"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "HeaderProfile_profile__Q1K-D",
+    "text": "F"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "HeaderProfile_avatar-wrapper__MB35F",
+    "text": "F"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Avatar_avatar__cv62w",
+    "text": "F"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "HeaderProfile_profile-dropdown__DFHEP",
+    "text": "Fred Pagefred.page@itchigho.eu.orgProfileSettingsDevice ActivityNotificationsEnv VariablesSSH KeysAb"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "HeaderProfile_profile-dropdown-header__2bSdg",
+    "text": "Fred Pagefred.page@itchigho.eu.org"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "HeaderProfile_profile-dropdown-header-name__WfkwT",
+    "text": "Fred Page"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "HeaderProfile_profile-dropdown-header-email__9c9cO",
+    "text": "fred.page@itchigho.eu.org"
+  },
+  {
+    "tag": "NAV",
+    "id": null,
+    "class": "ProfileNavigation_navigation__MfJRO",
+    "text": "ProfileSettingsDevice ActivityNotificationsEnv VariablesSSH KeysAboutLogout"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Profile"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Profile"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Settings"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Settings"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Device Activity"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Device Activity"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Notifications"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Notifications"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Env Variables"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Env Variables"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "SSH Keys"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "SSH Keys"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "About"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "About"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Logout"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj ProfileNavigation_logout-nav-item__++zWs",
+    "text": "Logout"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ContentBelowHeader_content-below-header__R5Sjs",
+    "text": "Workspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspaces\nCreate\n// LOADING"
+  },
+  {
+    "tag": "ASIDE",
+    "id": null,
+    "class": "Sidebar_sidebar__RjQ84",
+    "text": "Workspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade"
+  },
+  {
+    "tag": "NAV",
+    "id": null,
+    "class": "SidebarNavigation_navigation__Y1--a",
+    "text": "Workspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade"
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigation_navigation-menu__DMK-S",
+    "text": "Workspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group__+Va67",
+    "text": "Workspaces\nUsage"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-header__gIPPX",
+    "text": null
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-submenu__r3nAe SidebarNavigationItemGroup_navigation-submenu-expanded__SLVKI",
+    "text": "Workspaces\nUsage"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Workspaces"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ SidebarNavigationItem_navigation-item-link--active__kY8Gk",
+    "text": "Workspaces"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Usage"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ",
+    "text": "Usage"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group__+Va67",
+    "text": "TEAM\nSubscription"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-header__gIPPX SidebarNavigationItemGroup_navigation-item-group-header-pointer__IElPE",
+    "text": "TEAM"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-label__i3aaN",
+    "text": "TEAM"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-submenu__r3nAe SidebarNavigationItemGroup_navigation-submenu-expanded__SLVKI",
+    "text": "Subscription"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Subscription"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ",
+    "text": "Subscription"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group__+Va67",
+    "text": "LINKS\nDocs"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-header__gIPPX",
+    "text": "LINKS"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-label__i3aaN",
+    "text": "LINKS"
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-submenu__r3nAe SidebarNavigationItemGroup_navigation-submenu-expanded__SLVKI",
+    "text": "Docs"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Docs"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ",
+    "text": "Docs"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Upgrade"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Upgrade"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "subscription-button",
+    "text": "Upgrade"
+  },
+  {
+    "tag": "MAIN",
+    "id": null,
+    "class": "MainContent_main-content__i28s0",
+    "text": "Workspaces\nCreate\n// LOADING"
+  },
+  {
+    "tag": "H1",
+    "id": null,
+    "class": "Heading_heading__6oKdZ",
+    "text": "Workspaces"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "list",
+    "text": "Create\n// LOADING"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ListActionRow_list-action-row__ahEXd",
+    "text": "Create"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SearchInput_search-wrapper__y5beB",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "INPUT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Create"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "Button_button__dboXH Button_button--color-primary__DUSDF Button_button--variant-contained__42fXM Button_button--size-normal__DeOhr",
+    "text": "Create"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SectionLoader_wrapper__tl6xv",
+    "text": "// LOADING"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "LabeledSpinner_wrapper__4cT4x",
+    "text": "// LOADING"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Spinner_spinner__0F64B Spinner_spinner__0F64B",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Drawer_drawer__GpVX7 Drawer_drawer--position-left__z33B+ SidebarNavigationDrawer_drawer__nSwDE",
+    "text": "Dashboard WorkspacesUsageTeam SubscriptionLinks Docs"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "DrawerHeader_header__ayYKG",
+    "text": "Dashboard"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationDrawer_drawer-header__QE+04",
+    "text": "Dashboard"
+  },
+  {
+    "tag": "IMG",
+    "id": null,
+    "class": "SidebarNavigationDrawer_drawer-header-logo__A0Uox",
+    "text": null
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "SidebarNavigationDrawer_drawer-header-title__qjuK4",
+    "text": "Dashboard"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "DrawerHeader_close-icon-wrapper__Jaeuh",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "NAV",
+    "id": null,
+    "class": "SidebarNavigation_navigation__Y1--a",
+    "text": " WorkspacesUsageTeam SubscriptionLinks Docs"
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigation_navigation-menu__DMK-S",
+    "text": " WorkspacesUsageTeam SubscriptionLinks Docs"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group__+Va67",
+    "text": " WorkspacesUsage"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-header__gIPPX",
+    "text": null
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-submenu__r3nAe SidebarNavigationItemGroup_navigation-submenu-expanded__SLVKI",
+    "text": " WorkspacesUsage"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Workspaces"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ SidebarNavigationItem_navigation-item-link--active__kY8Gk",
+    "text": "Workspaces"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Usage"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ",
+    "text": "Usage"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group__+Va67",
+    "text": "Team Subscription"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-header__gIPPX SidebarNavigationItemGroup_navigation-item-group-header-pointer__IElPE",
+    "text": "Team"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-label__i3aaN",
+    "text": "Team"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-submenu__r3nAe SidebarNavigationItemGroup_navigation-submenu-expanded__SLVKI",
+    "text": " Subscription"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Subscription"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ",
+    "text": "Subscription"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group__+Va67",
+    "text": "Links Docs"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-header__gIPPX",
+    "text": "Links"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-label__i3aaN",
+    "text": "Links"
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-submenu__r3nAe SidebarNavigationItemGroup_navigation-submenu-expanded__SLVKI",
+    "text": " Docs"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Docs"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ",
+    "text": "Docs"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Drawer_drawer__GpVX7 Drawer_drawer--position-right__47m7X ProfileNavigationDrawer_drawer__zRvP8",
+    "text": "Fred Pagefred.page@itchigho.eu.orgProfileSettingsDevice ActivityNotificationsEnv VariablesSSH KeysAb"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "DrawerHeader_header__ayYKG",
+    "text": "Fred Pagefred.page@itchigho.eu.org"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationDrawer_drawer-header__qaFay",
+    "text": "Fred Pagefred.page@itchigho.eu.org"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "ProfileNavigationDrawer_drawer-header-name__YmrRg",
+    "text": "Fred Page"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "ProfileNavigationDrawer_drawer-header-email__PfQaz",
+    "text": "fred.page@itchigho.eu.org"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "DrawerHeader_close-icon-wrapper__Jaeuh",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "NAV",
+    "id": null,
+    "class": "ProfileNavigation_navigation__MfJRO",
+    "text": "ProfileSettingsDevice ActivityNotificationsEnv VariablesSSH KeysAboutLogout"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Profile"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Profile"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Settings"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Settings"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Device Activity"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Device Activity"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Notifications"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Notifications"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Env Variables"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Env Variables"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "SSH Keys"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "SSH Keys"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "About"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "About"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Logout"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj ProfileNavigation_logout-nav-item__++zWs",
+    "text": "Logout"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ToastPortal_list__E3GaR",
+    "text": null
+  },
+  {
+    "tag": "IFRAME",
+    "id": null,
+    "class": null,
+    "text": null
+  }
+]

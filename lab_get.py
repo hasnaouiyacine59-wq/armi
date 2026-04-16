@@ -9,7 +9,7 @@ from playwright.sync_api import sync_playwright
 
 fake = Faker()
 
-DOMAINS = ["techxbox.eu.org", "itchigho.eu.org", "bitcoin-plazza.eu.org", "youoneshell.eu.org"]
+DOMAINS = ["alpha-sig.eu.org","ubua83@ziw0tempemail.eu.org", "alpha804.eu.org", "bitcoin-plazza.eu.org", "youoneshell.eu.org"]
 VIEWPORTS = [(1366, 768), (1440, 900), (1536, 864), (1920, 1080), (1280, 720)]
 LOCALES = ["en-US", "en-GB", "en-CA", "fr-FR", "de-DE"]
 TIMEZONES = ["America/New_York", "Europe/London", "Europe/Paris", "America/Chicago", "Asia/Tokyo"]
@@ -22,7 +22,8 @@ def generate_user():
     lname = fake.last_name()
     num = random_num()
 
-    email = f"{fname.lower()}.{lname.lower()}@{random.choice(DOMAINS)}"
+    email = f"kalawssimatrix+{num}@gmail.com"
+    # email = f"{fname.lower()}.{lname.lower()}@{random.choice(DOMAINS)}"
     username = f"{fname.lower()}{lname.lower()}{num}"
     password = f"{fname}{lname}{num}!"
 
@@ -172,10 +173,11 @@ if __name__ == "__main__":
             try:
                 print("[8] Opening app.codeanywhere.com and clicking Bitbucket...")
                 ca_page = context.new_page()
-                ca_page.goto("https://app.codeanywhere.com/")
+                ca_page.goto("https://app.codeanywhere.com/", wait_until="networkidle")
+                ca_page.wait_for_timeout(3000)
                 print(f"[8] URL: {ca_page.url}")
-                # Click GitLab first, then Tab to move to Bitbucket (below GitLab) and press Enter
-                ca_page.wait_for_selector('#social-bitbucket', timeout=15000)
+                ca_page.wait_for_selector('#social-bitbucket', timeout=30000)
+                ca_page.wait_for_timeout(1000)
                 ca_page.click('#social-bitbucket')
                 print(f"[8] Clicked Bitbucket, URL: {ca_page.url}")
                 ca_page.wait_for_selector('button[value="approve"]', timeout=60000)
@@ -199,13 +201,28 @@ if __name__ == "__main__":
 
                 try:
                     print("[9] Selecting Codeanywhere-Templates/empty...")
-                    ca_page.wait_for_selector('.GitRepositoryInfo_label__QUpyv:has-text("Codeanywhere-Templates/empty")', timeout=15000)
-                    ca_page.wait_for_timeout(1500)
-                    ca_page.locator('.GitRepositoryInfo_label__QUpyv:has-text("Codeanywhere-Templates/empty")').scroll_into_view_if_needed()
-                    ca_page.locator('.GitRepositoryInfo_label__QUpyv:has-text("Codeanywhere-Templates/empty")').click(force=True)
+                    ca_page.wait_for_timeout(2000)
+                    clicked = ca_page.evaluate("""() => {
+                        const labels = document.querySelectorAll('.GitRepositoryInfo_label__QUpyv');
+                        for (const el of labels) {
+                            if (el.textContent.trim() === 'Codeanywhere-Templates/empty') {
+                                el.scrollIntoView({ block: 'center' });
+                                (el.closest('li') || el.closest('[role="option"]') || el.parentElement).click();
+                                return true;
+                            }
+                        }
+                        return false;
+                    }""")
+                    if not clicked:
+                        raise Exception("Codeanywhere-Templates/empty not found in DOM")
+                    print("[9] Clicked Codeanywhere-Templates/empty via JS.")
                 except Exception as e:
                     print(f"[9] ERROR selecting repository: {e}")
                     input('fix repo selection then press Enter...')
+
+                with open("dump_after_repo_select.html", "w") as _df:
+                    _df.write(ca_page.content())
+                print("[9] Dumped page HTML to dump_after_repo_select.html")
 
                 import json, os
                 ca_cookies = [c for c in context.cookies() if 'codeanywhere.com' in c['domain']]
