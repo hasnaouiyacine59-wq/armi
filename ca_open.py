@@ -353,6 +353,8 @@ def _screenshot(page: Page) -> np.ndarray:
             return cv2.imdecode(buf, cv2.IMREAD_COLOR)
         except Exception as e:
             print(f"[debug] screenshot failed: {e}", flush=True)
+            if "has been closed" in str(e):
+                raise RuntimeError("Browser closed unexpectedly") from e
             time.sleep(5)
 
 
