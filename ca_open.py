@@ -29,7 +29,7 @@ def log(step, msg, color="cyan"):
 # ── Step 1: Session selection ─────────────────────────────────────────────────
 
 def pick_session(s: int):
-    files = sorted(glob.glob(os.path.join(SESSIONS_DIR, "ca_cookies_*.json")),
+    files = sorted(glob.glob(os.path.join(SESSIONS_DIR, "*.json")),
                    key=os.path.getmtime, reverse=True)
     if not files:
         log("!", "No cookie files found.", "red"); exit(1)
@@ -37,7 +37,7 @@ def pick_session(s: int):
     print(f"\n{C['bold']}{C['blue']}{'─'*40}{C['reset']}")
     print(f"{C['bold']}{C['blue']}  Available Sessions:{C['reset']}")
     for i, f in enumerate(files, 1):
-        name   = os.path.basename(f).replace("ca_cookies_", "").replace(".json", "")
+        name   = os.path.basename(f).replace(".json", "")
         marker = f"{C['green']}▶ " if i == s else "  "
         print(f"  {marker}{C['yellow']}[{i}]{C['reset']} {name}")
     print(f"{C['bold']}{C['blue']}{'─'*40}{C['reset']}\n")
@@ -46,7 +46,7 @@ def pick_session(s: int):
         log("!", f"Session {s} not found. Available: 1-{len(files)}", "red"); exit(1)
 
     cookies_file = files[s - 1]
-    session_name = os.path.basename(cookies_file).replace("ca_cookies_", "").replace(".json", "")
+    session_name = os.path.basename(cookies_file).replace(".json", "")
     log("*", f"Using session {C['yellow']}[{s}]{C['reset']} {C['bold']}{session_name}", "green")
     return cookies_file, session_name
 
@@ -327,7 +327,11 @@ def open_vscode(page: Page, context: BrowserContext) -> Page:
         json.dump(elements, f, indent=2)
     log("~", f"VS Code tab dumped to {dump_path}", "yellow")
 
+    deadline = time.time() + 120
     while any("Setting up your workspace" in (el.get("text") or "") for el in elements):
+        if time.time() > deadline:
+            log("!", "Workspace setup exceeded 2 minutes, exiting.", "red")
+            raise RuntimeError("Workspace setup timeout")
         log("~", "Workspace still setting up, waiting 15s...", "yellow")
         time.sleep(15)
         elements = vs_page.evaluate("""() =>
@@ -431,6 +435,7 @@ def click_terminal(vs_page: Page) -> tuple:
             time.sleep(5)
     except Exception as e:
         log("!", f"Terminal error: {e}", "red")
+        raise
     return cx, cy
 
 
@@ -476,15 +481,20 @@ def main():
 
     with sync_playwright() as p:
         browser, context = launch_browser(p)
-        page      = open_dashboard(context, cookies_file, session_name)  # step 3
-        page      = create_workspace(page, context)                       # step 5
-        vs_page   = open_vscode(page, context)                           # step 6
-        wait_workspace_ready(vs_page)                                     # step 7
-        cx, cy    = click_terminal(vs_page)                              # step 8
-        run_init_command(vs_page, cx, cy)                                 # step 9
-        wait_end(vs_page, page)                                           # step 10
-        context.close()
-        browser.close()
+        try:
+            page      = open_dashboard(context, cookies_file, session_name)  # step 3
+            page      = create_workspace(page, context)                       # step 5
+            vs_page   = open_vscode(page, context)                           # step 6
+            wait_workspace_ready(vs_page)                                     # step 7
+            cx, cy    = click_terminal(vs_page)                              # step 8
+            run_init_command(vs_page, cx, cy)                                 # step 9
+            wait_end(vs_page, page)                                           # step 10
+        except Exception as e:
+            log("!", f"Fatal error: {e}", "red")
+            raise
+        finally:
+            context.close()
+            browser.close()
 
 
 if __name__ == "__main__":

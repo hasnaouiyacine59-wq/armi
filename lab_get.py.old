@@ -2,14 +2,6 @@ import random
 import string
 import sys
 import os
-import time
-import json
-import re
-import html
-import urllib.parse
-import urllib.request
-import cv2
-import numpy as np
 sys.path.insert(0, os.path.dirname(__file__))
 from faker import Faker
 from get_2FA import get_2fa
@@ -17,7 +9,7 @@ from playwright.sync_api import sync_playwright
 
 fake = Faker()
 
-DOMAINS = ["techxbox.eu.org", "itchigho.eu.org", "bitcoin-plazza.eu.org", "youoneshell.eu.org"]
+DOMAINS = ["alpha-sig.eu.org","ubua83@ziw0tempemail.eu.org", "alpha804.eu.org", "bitcoin-plazza.eu.org", "youoneshell.eu.org"]
 VIEWPORTS = [(1366, 768), (1440, 900), (1536, 864), (1920, 1080), (1280, 720)]
 LOCALES = ["en-US", "en-GB", "en-CA", "fr-FR", "de-DE"]
 TIMEZONES = ["America/New_York", "Europe/London", "Europe/Paris", "America/Chicago", "Asia/Tokyo"]
@@ -30,8 +22,8 @@ def generate_user():
     lname = fake.last_name()
     num = random_num()
 
+    email = f"kalawssimatrix+{num}@gmail.com"
     # email = f"{fname.lower()}.{lname.lower()}@{random.choice(DOMAINS)}"
-    email = f"kalawssimatrix+0{lname.lower()}@gmail.com"
     username = f"{fname.lower()}{lname.lower()}{num}"
     password = f"{fname}{lname}{num}!"
 
@@ -128,98 +120,6 @@ if __name__ == "__main__":
 
         input('\nyoh')
 
-        def _screenshot(pg):
-            while True:
-                try:
-                    buf = np.frombuffer(pg.screenshot(timeout=0), np.uint8)
-                    return cv2.imdecode(buf, cv2.IMREAD_COLOR)
-                except Exception:
-                    time.sleep(2)
-
-        square_tmpl = cv2.imread(os.path.join(os.path.dirname(__file__), "src", "square.png"), cv2.IMREAD_COLOR)
-        while True:
-            screen = _screenshot(page)
-            result = cv2.matchTemplate(screen, square_tmpl, cv2.TM_CCOEFF_NORMED)
-            _, val, _, loc = cv2.minMaxLoc(result)
-            if val >= 0.8:
-                h, w = square_tmpl.shape[:2]
-                page.mouse.click(loc[0] + w // 2, loc[1] + h // 2)
-                break
-            time.sleep(3)
-        input('ste1')
-
-        headphone_tmpl = cv2.imread(os.path.join(os.path.dirname(__file__), "src", "headphone.png"), cv2.IMREAD_COLOR)
-        while True:
-            screen = _screenshot(page)
-            result = cv2.matchTemplate(screen, headphone_tmpl, cv2.TM_CCOEFF_NORMED)
-            _, val, _, loc = cv2.minMaxLoc(result)
-            if val >= 0.8:
-                h, w = headphone_tmpl.shape[:2]
-                page.mouse.click(loc[0] + w // 2, loc[1] + h // 2)
-                break
-            time.sleep(3)
-        input('set2')
-
-        arrow_tmpl = cv2.imread(os.path.join(os.path.dirname(__file__), "src", "arrow.png"), cv2.IMREAD_COLOR)
-        while True:
-            screen = _screenshot(page)
-            result = cv2.matchTemplate(screen, arrow_tmpl, cv2.TM_CCOEFF_NORMED)
-            _, val, _, loc = cv2.minMaxLoc(result)
-            if val >= 0.8:
-                h, w = arrow_tmpl.shape[:2]
-                iframes = page.frames
-                iframe_dump = []
-                audio_url = None
-                for fr in iframes:
-                    try:
-                        content = fr.content()
-                        iframe_dump.append({"url": fr.url, "name": fr.name, "content": content})
-                    except Exception as e:
-                        iframe_dump.append({"url": fr.url, "name": fr.name, "error": str(e)})
-                        content = ""
-                    if not audio_url:
-                        m = re.search(r'<audio[^>]+id="audio-source"[^>]+src="([^"]+)"', content)
-                        if not m:
-                            m = re.search(r'<audio[^>]+src="([^"]+)"[^>]+id="audio-source"', content)
-                        if m:
-                            audio_url = html.unescape(m.group(1))
-                with open("iframes_dump.json", "w") as _f:
-                    json.dump(iframe_dump, _f, indent=2)
-                print(f"[debug] dumped {len(iframe_dump)} iframes to iframes_dump.json")
-                for fr in iframes:
-                    try:
-                        content = fr.content()
-                    except Exception:
-                        continue
-                    for m in re.finditer(r'src="(https?://[^"]+)"', content):
-                        print(f"[debug] src: {m.group(1)}")
-                    if not audio_url:
-                        m2 = re.search(r'<audio[^>]+id="audio-source"[^>]+src="([^"]+)"', content)
-                        if not m2:
-                            m2 = re.search(r'<audio[^>]+src="([^"]+)"[^>]+id="audio-source"', content)
-                        if m2:
-                            audio_url = html.unescape(m2.group(1))
-                if audio_url:
-                    print(f"[debug] downloading audio: {audio_url}")
-                    try:
-                        # find the bframe iframe and fetch from its context
-                        bframe = next((fr for fr in iframes if "bframe" in fr.url), None) or iframes[0]
-                        audio_bytes = bframe.evaluate("""async (url) => {
-                            const r = await fetch(url);
-                            const buf = await r.arrayBuffer();
-                            return Array.from(new Uint8Array(buf));
-                        }""", audio_url)
-                        with open("captcha_audio.mp3", "wb") as _af:
-                            _af.write(bytes(audio_bytes))
-                        print("[debug] downloaded captcha_audio.mp3")
-                    except Exception as e:
-                        print(f"[debug] download failed: {e}")
-                        input('r444')
-                page.mouse.click(loc[0] + w // 2, loc[1] + h // 2)
-                break
-            time.sleep(3)
-        input('set3')
-
         print("[4] Fetching 2FA code from email...")
         code = get_2fa(user["email"])
         if code:
@@ -257,7 +157,7 @@ if __name__ == "__main__":
 
         try:
             print("[7] Waiting for redirect to Atlassian home...")
-            # page.wait_for_url("https://id.atlassian.com/login/authorize?continue=https%3A%2F%2Fhome.atlassian.com%3F&token=eyJraWQiOiJtaWNyb3MvaWQtYXV0aGVudGljYXRpb24vYmxxbmtoaWR0ZzBjOGRpYSIsImFsZyI6IlJTMjU2In0.eyJtYXJrZWRWZXJpZmllZCI6ImZhbHNlIiwibG9naW5UeXBlIjoic2Vzc2lvblJlZnJlc2giLCJjb250YWluZXJUeXBlIjoiZ2xvYmFsIiwiaXNzIjoibWljcm9zL2lkLWF1dGhlbnRpY2F0aW9uIiwidXNlcklkIjoiNzEyMDIwOmIyN2MwZjY1LWZiMjUtNDI4MC05NzRmLTg2OGEzOGZlZjAzNiIsInRyYW5zYWN0aW9uSWQiOiJ1cy1lYXN0LTF8OTExODMwMzUtNDgwNy00Nzg5LWE2ODgtZjdhNDliNDAxM2U3IiwiaXNTbGFja0FwcFNvdXJjZSI6ImZhbHNlIiwiYXVkIjoibGluay1zaWduYXR1cmUtdmFsaWRhdG9yIiwibmJmIjoxNzc2Mzg1MTA5LCJzY29wZSI6IkxvZ2luIiwidmVyaWZpY2F0aW9uVHlwZSI6InZlcmlmeSIsImV4cCI6MTc3NjM4NTIyOSwiaWF0IjoxNzc2Mzg1MTA5LCJqdGkiOiJjNmQ5NDMwOS01N2NlLTQ2YzQtYTQ0ZC1lNzIyNTM5MTU1ODQiLCJoYXNoZWRDc3JmVG9rZW4iOiJjMDA1YmY3YTg0YzBiMmU0OWM1ZTlhNjdmYzg0MDQ3OGRjYjhk", timeout=60000)
+            page.wait_for_url("https://home.atlassian.com/?utm_source=identity", timeout=60000)
             print(f"[7] Success! URL: {page.url}")
             page.wait_for_selector('span:has-text("Home")', timeout=15000)
             print("[7] Home element appeared.")
@@ -273,10 +173,11 @@ if __name__ == "__main__":
             try:
                 print("[8] Opening app.codeanywhere.com and clicking Bitbucket...")
                 ca_page = context.new_page()
-                ca_page.goto("https://app.codeanywhere.com/")
+                ca_page.goto("https://app.codeanywhere.com/", wait_until="networkidle")
+                ca_page.wait_for_timeout(3000)
                 print(f"[8] URL: {ca_page.url}")
-                # Click GitLab first, then Tab to move to Bitbucket (below GitLab) and press Enter
-                ca_page.wait_for_selector('#social-bitbucket', timeout=15000)
+                ca_page.wait_for_selector('#social-bitbucket', timeout=30000)
+                ca_page.wait_for_timeout(1000)
                 ca_page.click('#social-bitbucket')
                 print(f"[8] Clicked Bitbucket, URL: {ca_page.url}")
                 ca_page.wait_for_selector('button[value="approve"]', timeout=60000)
@@ -294,35 +195,41 @@ if __name__ == "__main__":
                 ca_page.keyboard.press('Tab')
                 ca_page.keyboard.press('Enter')
 
-                print("[9] Dumping full page HTML for inspection...")
-                with open("ca_page_dump.html", "w") as _f:
-                    _f.write(ca_page.content())
-                print("[9] Saved to ca_page_dump.html")
+                print("[9] Waiting for repository selector...")
+                ca_page.wait_for_selector('.GitRepositoryDropdown_placeholder-wrapper__XeYoL', timeout=30000)
+                ca_page.click('.GitRepositoryDropdown_selected-option-caret-icon__cFRRk')
 
-                print("[9] Waiting for repository dropdown button...")
-                ca_page.wait_for_selector('button.GitRepositoryDropdown_selected-option__4yDhC', timeout=30000)
+                try:
+                    print("[9] Selecting Codeanywhere-Templates/empty...")
+                    ca_page.wait_for_timeout(2000)
+                    clicked = ca_page.evaluate("""() => {
+                        const labels = document.querySelectorAll('.GitRepositoryInfo_label__QUpyv');
+                        for (const el of labels) {
+                            if (el.textContent.trim() === 'Codeanywhere-Templates/empty') {
+                                el.scrollIntoView({ block: 'center' });
+                                (el.closest('li') || el.closest('[role="option"]') || el.parentElement).click();
+                                return true;
+                            }
+                        }
+                        return false;
+                    }""")
+                    if not clicked:
+                        raise Exception("Codeanywhere-Templates/empty not found in DOM")
+                    print("[9] Clicked Codeanywhere-Templates/empty via JS.")
+                except Exception as e:
+                    print(f"[9] ERROR selecting repository: {e}")
+                    input('fix repo selection then press Enter...')
 
-                # Open dropdown only if not already expanded
-                btn = ca_page.query_selector('button.GitRepositoryDropdown_selected-option__4yDhC')
-                if 'expanded' not in (btn.get_attribute('class') or ''):
-                    btn.click()
-                    print("[9] Clicked dropdown to open.")
-                else:
-                    print("[9] Dropdown already open.")
-
-                print("[9] Waiting for 'empty' option...")
-                ca_page.wait_for_selector('.GitRepositoryInfo_label__QUpyv', timeout=15000)
-                target = ca_page.locator('.GitRepositoryInfo_label__QUpyv:text-is("Codeanywhere-Templates/empty")').first
-                target.scroll_into_view_if_needed()
-                target.click()
-                print("[9] Repository selected.")
+                with open("dump_after_repo_select.html", "w") as _df:
+                    _df.write(ca_page.content())
+                print("[9] Dumped page HTML to dump_after_repo_select.html")
 
                 import json, os
                 ca_cookies = [c for c in context.cookies() if 'codeanywhere.com' in c['domain']]
                 cookies_file = f"sessions/ca_cookies_{user['first_name'].lower()}_{user['last_name'].lower()}_{user['email'].split('@')[0]}.json"
                 with open(cookies_file, "w") as f:
-                    json.dump({"email": user["email"], "password": password, "cookies": ca_cookies}, f, indent=2)
-                print(f"[9] Saved {len(ca_cookies)} Codeanywhere cookies + credentials to {cookies_file}")
+                    json.dump(ca_cookies, f, indent=2)
+                print(f"[9] Saved {len(ca_cookies)} Codeanywhere cookies to {cookies_file}")
 
                 print("[9] Waiting for Continue button...")
                 ca_page.wait_for_selector('button[type="submit"]:has-text("Continue")', timeout=30000)

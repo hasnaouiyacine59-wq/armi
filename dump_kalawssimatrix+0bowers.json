@@ -3,7 +3,7 @@
     "tag": "HTML",
     "id": null,
     "class": "light",
-    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nC\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nK\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
   },
   {
     "tag": "HEAD",
@@ -126,16 +126,10 @@
     "text": null
   },
   {
-    "tag": "STYLE",
-    "id": null,
-    "class": null,
-    "text": null
-  },
-  {
     "tag": "BODY",
     "id": null,
     "class": null,
-    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nC\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nK\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
   },
   {
     "tag": "NOSCRIPT",
@@ -147,19 +141,19 @@
     "tag": "DIV",
     "id": "root",
     "class": null,
-    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nC\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nK\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
   },
   {
     "tag": "DIV",
     "id": null,
     "class": "PageLayout_page__5ZfW5",
-    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nC\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nK\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
   },
   {
     "tag": "HEADER",
     "id": null,
     "class": "Header_header__yNbCJ",
-    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nC"
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nK"
   },
   {
     "tag": "DIV",
@@ -357,43 +351,43 @@
     "tag": "DIV",
     "id": null,
     "class": "HeaderProfile_profile__Q1K-D",
-    "text": "C"
+    "text": "K"
   },
   {
     "tag": "BUTTON",
     "id": null,
     "class": "HeaderProfile_avatar-wrapper__MB35F",
-    "text": "C"
+    "text": "K"
   },
   {
     "tag": "DIV",
     "id": null,
     "class": "Avatar_avatar__cv62w",
-    "text": "C"
+    "text": "K"
   },
   {
     "tag": "DIV",
     "id": null,
     "class": "HeaderProfile_profile-dropdown__DFHEP",
-    "text": "Christina Hayeskalawssimatrix+6802@gmail.comProfileSettingsDevice ActivityNotificationsEnv Variables"
+    "text": "Kim Bowerskalawssimatrix+0bowers@ziw0tempemail.eu.orgProfileSettingsDevice ActivityNotificationsEnv "
   },
   {
     "tag": "DIV",
     "id": null,
     "class": "HeaderProfile_profile-dropdown-header__2bSdg",
-    "text": "Christina Hayeskalawssimatrix+6802@gmail.com"
+    "text": "Kim Bowerskalawssimatrix+0bowers@ziw0tempemail.eu.org"
   },
   {
     "tag": "SPAN",
     "id": null,
     "class": "HeaderProfile_profile-dropdown-header-name__WfkwT",
-    "text": "Christina Hayes"
+    "text": "Kim Bowers"
   },
   {
     "tag": "SPAN",
     "id": null,
     "class": "HeaderProfile_profile-dropdown-header-email__9c9cO",
-    "text": "kalawssimatrix+6802@gmail.com"
+    "text": "kalawssimatrix+0bowers@ziw0tempemail.eu.org"
   },
   {
     "tag": "NAV",
@@ -627,7 +621,7 @@
     "tag": "DIV",
     "id": null,
     "class": "ContentBelowHeader_content-below-header__R5Sjs",
-    "text": "Workspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspaces\nCreate\ngithub.com\n/\nCodeanywhere-Te"
+    "text": "Workspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspaces\nCreate\n// LOADING"
   },
   {
     "tag": "ASIDE",
@@ -885,7 +879,7 @@
     "tag": "MAIN",
     "id": null,
     "class": "MainContent_main-content__i28s0",
-    "text": "Workspaces\nCreate\ngithub.com\n/\nCodeanywhere-Templates\n/\nempty\nempty\nSTOPPED\n19 MINUTES AGO\nVS Code"
+    "text": "Workspaces\nCreate\n// LOADING"
   },
   {
     "tag": "H1",
@@ -897,7 +891,7 @@
     "tag": "DIV",
     "id": null,
     "class": "list",
-    "text": "Create\ngithub.com\n/\nCodeanywhere-Templates\n/\nempty\nempty\nSTOPPED\n19 MINUTES AGO\nVS Code"
+    "text": "Create\n// LOADING"
   },
   {
     "tag": "DIV",
@@ -956,1082 +950,20 @@
   {
     "tag": "DIV",
     "id": null,
-    "class": "list-items WorkspacesList_list__bk7lL",
-    "text": "github.com\n/\nCodeanywhere-Templates\n/\nempty\nempty\nSTOPPED\n19 MINUTES AGO\nVS Code"
+    "class": "SectionLoader_wrapper__tl6xv",
+    "text": "// LOADING"
   },
   {
     "tag": "DIV",
     "id": null,
-    "class": "WorkspaceCard_workspace-card__49Rw8",
-    "text": "github.com\n/\nCodeanywhere-Templates\n/\nempty\nempty\nSTOPPED\n19 MINUTES AGO\nVS Code"
+    "class": "LabeledSpinner_wrapper__4cT4x",
+    "text": "// LOADING"
   },
   {
     "tag": "DIV",
     "id": null,
-    "class": "WorkspaceCard_main-content-section__2eE4W",
-    "text": "github.com\n/\nCodeanywhere-Templates\n/\nempty\nempty\nSTOPPED\n19 MINUTES AGO\nVS Code"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceCard_main-content-details-wrapper__NAnDM",
-    "text": "github.com\n/\nCodeanywhere-Templates\n/\nempty\nempty\nSTOPPED\n19 MINUTES AGO"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "GitContext_wrapper__6MVY3",
-    "text": "github.com\n/\nCodeanywhere-Templates\n/\nempty"
-  },
-  {
-    "tag": "A",
-    "id": null,
-    "class": "GitContext_link__L9Qqz",
-    "text": "github.com\n/\nCodeanywhere-Templates\n/\nempty"
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": null,
-    "text": "github.com"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "SlashDivider_slash-divider__WDnAm",
-    "text": "/"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": null,
-    "text": "Codeanywhere-Templates"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "SlashDivider_slash-divider__WDnAm",
-    "text": "/"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": null,
-    "text": "empty"
-  },
-  {
-    "tag": "H2",
-    "id": null,
-    "class": "Heading_heading__6oKdZ WorkspaceCard_workspace-name-row__PjpC3",
-    "text": "empty"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "workspace-name",
-    "text": "empty"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "Truncate_truncate__UooWf",
-    "text": "empty"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceCard_workspace-icon-buttons-container__svWn3",
-    "text": null
-  },
-  {
-    "tag": "BUTTON",
-    "id": null,
-    "class": "WorkspaceCard_rename-icon-wrapper__C2D-u",
-    "text": null
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "Tooltip_tooltip-wrapper__YVSLq",
-    "text": null
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "Tooltip_tooltip-content__g36kh tooltip-content--direction-top",
-    "text": "Inactive workspaces are deleted 14 days after they were last stopped. Pinned workspaces are never de"
-  },
-  {
-    "tag": "BUTTON",
-    "id": null,
-    "class": "WorkspaceCard_pin-icon-wrapper__Sqy+i",
-    "text": null
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceCard_activity-row__vOmwt",
-    "text": "STOPPED\n19 MINUTES AGO"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "WorkspaceCard_workspace-state__GLsX1 WorkspaceCard_workspace-state--stopped__qdvSO",
-    "text": "STOPPED"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "WorkspaceCard_last-activity__g5iZg",
-    "text": "19 MINUTES AGO"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceCard_open-workspace-button-wrapper__i3CGF",
-    "text": "VS Code"
-  },
-  {
-    "tag": "BUTTON",
-    "id": null,
-    "class": "Button_button__dboXH Button_button--color-secondary__hMPBd Button_button--variant-outlined__pPGOu Button_button--size-normal__DeOhr WorkspaceCard_open-workspace-button__oSUki",
-    "text": "VS Code"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "CodeEditorInfo_wrapper__lJrYP WorkspaceCard_code-editor-info__Z+tJe",
-    "text": "VS Code"
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "title",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "defs",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "linearGradient",
-    "id": "linearGradient-1",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "stop",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "stop",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "g",
-    "id": "Page-1",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "g",
-    "id": "Artboard",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "g",
-    "id": "vscode-remote-icon-(1)",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": "Path",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": "Path",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": "Path",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "g",
-    "id": "Group",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": "Shape",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "circle",
-    "id": "Oval",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": "Shape",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "CodeEditorInfo_text-container__jcwEj",
-    "text": "VS Code"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "CodeEditorInfo_name__zea4f",
-    "text": "VS Code"
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceCard_toggle-card-button-section__PvOBj",
-    "text": null
-  },
-  {
-    "tag": "BUTTON",
-    "id": null,
-    "class": "WorkspaceCard_toggle-card-button__mVK6h",
-    "text": null
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "WorkspaceCard_expand-details__rLYre",
-    "text": "Expand details"
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceCard_extra-content-section__SLjwa",
-    "text": "Launch remote environmentVS Code BrowserVS Code\u2022BrowserConnect via SSHYou need to add a public key v"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceCard_workspace-access__G6DLX",
-    "text": "Launch remote environmentVS Code BrowserVS Code\u2022BrowserConnect via SSHYou need to add a public key v"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceCard_workspace-access__labeled-element__3ZVVZ",
-    "text": "Launch remote environmentVS Code BrowserVS Code\u2022Browser"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "WorkspaceCard_workspace-access-label__6S0cT",
-    "text": "Launch remote environment"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "CodeEditorDropdown_container__AFdlb css-b62m3t-container",
-    "text": "VS Code BrowserVS Code\u2022Browser"
-  },
-  {
-    "tag": "SPAN",
-    "id": "react-select-2-live-region",
-    "class": "css-7pg0cj-a11yText",
-    "text": null
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "css-7pg0cj-a11yText",
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "CodeEditorDropdown_control__QiGsC css-13cymwt-control",
-    "text": "VS Code BrowserVS Code\u2022Browser"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "CodeEditorDropdown_value-container__26b9Z css-hlgwow",
-    "text": "VS Code BrowserVS Code\u2022Browser"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "CodeEditorDropdown_single-value__Wa525 css-1dimb5e-singleValue",
-    "text": "VS Code BrowserVS Code\u2022Browser"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "CodeEditorInfo_wrapper__lJrYP",
-    "text": "VS Code BrowserVS Code\u2022Browser"
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "title",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "defs",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "linearGradient",
-    "id": "linearGradient-1",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "stop",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "stop",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "g",
-    "id": "Page-1",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "g",
-    "id": "Artboard",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "g",
-    "id": "vscode-remote-icon-(1)",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": "Path",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": "Path",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": "Path",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "g",
-    "id": "Group",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": "Shape",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "circle",
-    "id": "Oval",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": "Shape",
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "CodeEditorInfo_text-container__jcwEj",
-    "text": "VS Code\u2022Browser"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "CodeEditorInfo_name__zea4f",
-    "text": "VS Code"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "CodeEditorInfo_divider__Z6sEy",
-    "text": "\u2022"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "CodeEditorInfo_environment__FFql7",
-    "text": "Browser"
-  },
-  {
-    "tag": "INPUT",
-    "id": "react-select-2-input",
-    "class": "css-1hac4vs-dummyInput",
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": " css-1wy0on6",
-    "text": null
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "CodeEditorDropdown_indicator-separator__BW9HQ css-1u9des2-indicatorSeparator",
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "CodeEditorDropdown_dropdown-indicator__-dG30",
-    "text": null
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceCard_workspace-access__labeled-element__3ZVVZ",
-    "text": "Connect via SSHYou need to add a public key via the SSH Keys page found in the user menu.Public KeyA"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "WorkspaceCard_workspace-access-label__6S0cT",
-    "text": "Connect via SSH"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceCard_connect-via-ssh__E60YF",
-    "text": "You need to add a public key via the SSH Keys page found in the user menu.Public KeyAccess TokenAnyo"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "Tabs_navigation-tabs__ESa9m",
-    "text": "You need to add a public key via the SSH Keys page found in the user menu.Public KeyAccess Token"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "Tooltip_tooltip-wrapper__YVSLq",
-    "text": "You need to add a public key via the SSH Keys page found in the user menu.Public Key"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "Tooltip_tooltip-content__g36kh tooltip-content--direction-top",
-    "text": "You need to add a public key via the SSH Keys page found in the user menu."
-  },
-  {
-    "tag": "BUTTON",
-    "id": null,
-    "class": "Tabs_navigation-tabs__tab__3lSe7 Tabs_navigation-tabs__tab--disabled__rimAo",
-    "text": "Public Key"
-  },
-  {
-    "tag": "BUTTON",
-    "id": null,
-    "class": "Tabs_navigation-tabs__tab__3lSe7 Tabs_navigation-tabs__tab--active__ZyuIg",
-    "text": "Access Token"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceCard_connect-via-ssh-input-wrapper__j4JmS",
-    "text": null
-  },
-  {
-    "tag": "INPUT",
-    "id": null,
-    "class": "WorkspaceCard_connect-via-ssh-input__e38gH",
-    "text": null
-  },
-  {
-    "tag": "BUTTON",
-    "id": null,
-    "class": "CopyToClipboard_copy-icon-wrapper__slAFL WorkspaceCard_connect-via-ssh-copy-icon__lD2qi",
-    "text": null
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceCard_connect-via-ssh-disclaimer__v0gmU",
-    "text": "Anyone with the following command will be able to connect to this workspace. The command includes a "
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": null,
-    "text": "Anyone with the following command will be able to connect to this workspace. The command includes a "
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceCard_info-grid__pgXTj",
-    "text": "Workspace IDcodeanywhere-templates-e-jpx2wq2tyvWorkspace classDefault\u20224 CPU, 8GB RAM, 50GB Created a"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "labeled-value-wrapper",
-    "text": "Workspace IDcodeanywhere-templates-e-jpx2wq2tyv"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "LabeledElement_labeled-value-wrapper__label__5p8tp",
-    "text": "Workspace ID"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "labeled-value-wrapper__element",
-    "text": "codeanywhere-templates-e-jpx2wq2tyv"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "LabeledValue_value__srTe8",
-    "text": "codeanywhere-templates-e-jpx2wq2tyv"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "Truncate_truncate__UooWf",
-    "text": "codeanywhere-templates-e-jpx2wq2tyv"
-  },
-  {
-    "tag": "BUTTON",
-    "id": null,
-    "class": "CopyToClipboard_copy-icon-wrapper__slAFL",
-    "text": null
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "labeled-value-wrapper",
-    "text": "Workspace classDefault\u20224 CPU, 8GB RAM, 50GB "
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "LabeledElement_labeled-value-wrapper__label__5p8tp",
-    "text": "Workspace class"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "labeled-value-wrapper__element",
-    "text": "Default\u20224 CPU, 8GB RAM, 50GB "
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceClassInfo_wrapper__0s4rR",
-    "text": "Default\u20224 CPU, 8GB RAM, 50GB "
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceClassInfo_content__Cgljj WorkspaceCard_workspace-class__PuHmq",
-    "text": "Default\u20224 CPU, 8GB RAM, 50GB "
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "WorkspaceClassInfo_name__lEfAY",
-    "text": "Default"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "WorkspaceClassInfo_divider__+MH38",
-    "text": "\u2022"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "WorkspaceClassInfo_resources__DmY8I",
-    "text": "4 CPU, 8GB RAM, 50GB "
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceCard_info-grid__subgrid__hmHnL",
-    "text": "Created at10/04/2026, 22:30:20Updated at10/04/2026, 22:30:20"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "labeled-value-wrapper",
-    "text": "Created at10/04/2026, 22:30:20"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "LabeledElement_labeled-value-wrapper__label__5p8tp",
-    "text": "Created at"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "labeled-value-wrapper__element",
-    "text": "10/04/2026, 22:30:20"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "LabeledValue_value__srTe8",
-    "text": "10/04/2026, 22:30:20"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "Truncate_truncate__UooWf",
-    "text": "10/04/2026, 22:30:20"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "labeled-value-wrapper",
-    "text": "Updated at10/04/2026, 22:30:20"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "LabeledElement_labeled-value-wrapper__label__5p8tp",
-    "text": "Updated at"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "labeled-value-wrapper__element",
-    "text": "10/04/2026, 22:30:20"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "LabeledValue_value__srTe8",
-    "text": "10/04/2026, 22:30:20"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "Truncate_truncate__UooWf",
-    "text": "10/04/2026, 22:30:20"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceCard_info-grid__actions-row__Zo1lp",
-    "text": "StartDeleteSharePrivateEveryone"
-  },
-  {
-    "tag": "BUTTON",
-    "id": null,
-    "class": "Button_button__dboXH Button_button--color-secondary__hMPBd Button_button--variant-outlined__pPGOu Button_button--size-normal__DeOhr",
-    "text": "Start"
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "BUTTON",
-    "id": null,
-    "class": "Button_button__dboXH Button_button--color-secondary__hMPBd Button_button--variant-outlined__pPGOu Button_button--size-normal__DeOhr",
-    "text": "Delete"
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceSharingPolicyDropdown_policy-dropdown-wrapper__l46Ew",
-    "text": "SharePrivateEveryone"
-  },
-  {
-    "tag": "BUTTON",
-    "id": null,
-    "class": "Button_button__dboXH Button_button--color-secondary__hMPBd Button_button--variant-outlined__pPGOu Button_button--size-normal__DeOhr",
-    "text": "Share"
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceSharingPolicyDropdown_policy-dropdown__jkAoF",
-    "text": "PrivateEveryone"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceSharingPolicyDropdown_menu__qMyXA",
-    "text": "PrivateEveryone"
-  },
-  {
-    "tag": "BUTTON",
-    "id": null,
-    "class": "WorkspaceSharingPolicyDropdown_option__rd+G2",
-    "text": "Private"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceSharingPolicyDropdown_policy-label__kGi2u",
-    "text": "Private"
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "WorkspaceSharingPolicyDropdown_untruncated-policy-name__ktNSd",
-    "text": "Private"
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "BUTTON",
-    "id": null,
-    "class": "WorkspaceSharingPolicyDropdown_option__rd+G2",
-    "text": "Everyone"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "WorkspaceSharingPolicyDropdown_policy-label__kGi2u",
-    "text": "Everyone"
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "WorkspaceSharingPolicyDropdown_untruncated-policy-name__ktNSd",
-    "text": "Everyone"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "Dialog_dialog__QQyDg DeleteWorkspaceConfirmationDialog_dialog__bdJIT",
-    "text": "To confirm deletion, please type codeanywhere-templates-e-jpx2wq2tyv in the field below.CancelDelete"
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "DialogHeader_header__PK0Wj",
-    "text": "To confirm deletion, please type codeanywhere-templates-e-jpx2wq2tyv in the field below."
-  },
-  {
-    "tag": "svg",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "path",
-    "id": null,
-    "class": {},
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "DialogHeader_title__aqE9C",
-    "text": "To confirm deletion, please type codeanywhere-templates-e-jpx2wq2tyv in the field below."
-  },
-  {
-    "tag": "CODE",
-    "id": null,
-    "class": "Code_code__lPydg",
-    "text": "codeanywhere-templates-e-jpx2wq2tyv"
-  },
-  {
-    "tag": "FORM",
-    "id": null,
-    "class": "Form_form__GnCzS",
-    "text": "CancelDeleteThis action is irreversible."
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "DialogBody_body__NampB",
-    "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "DialogInput_input-wrapper__LaNFJ",
-    "text": null
-  },
-  {
-    "tag": "INPUT",
-    "id": null,
-    "class": "DialogInput_input__Re7C5",
+    "class": "Spinner_spinner__0F64B Spinner_spinner__0F64B",
     "text": null
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "DialogFooter_footer__EgCXg",
-    "text": "CancelDeleteThis action is irreversible."
-  },
-  {
-    "tag": "DIV",
-    "id": null,
-    "class": "DialogFooter_actions__zmkQh",
-    "text": "CancelDelete"
-  },
-  {
-    "tag": "BUTTON",
-    "id": null,
-    "class": "Button_button__dboXH Button_button--color-secondary__hMPBd Button_button--variant-outlined__pPGOu Button_button--size-small__5nc2O",
-    "text": "Cancel"
-  },
-  {
-    "tag": "BUTTON",
-    "id": null,
-    "class": "Button_button__dboXH Button_button--color-danger__EiHL9 Button_button--variant-contained__42fXM Button_button--size-small__5nc2O Button_button--disabled__rUN+2",
-    "text": "Delete"
-  },
-  {
-    "tag": "SPAN",
-    "id": null,
-    "class": "DialogFooter_disclaimer__DgYsB",
-    "text": "This action is irreversible."
   },
   {
     "tag": "DIV",
@@ -2313,31 +1245,31 @@
     "tag": "DIV",
     "id": null,
     "class": "Drawer_drawer__GpVX7 Drawer_drawer--position-right__47m7X ProfileNavigationDrawer_drawer__zRvP8",
-    "text": "Christina Hayeskalawssimatrix+6802@gmail.comProfileSettingsDevice ActivityNotificationsEnv Variables"
+    "text": "Kim Bowerskalawssimatrix+0bowers@ziw0tempemail.eu.orgProfileSettingsDevice ActivityNotificationsEnv "
   },
   {
     "tag": "DIV",
     "id": null,
     "class": "DrawerHeader_header__ayYKG",
-    "text": "Christina Hayeskalawssimatrix+6802@gmail.com"
+    "text": "Kim Bowerskalawssimatrix+0bowers@ziw0tempemail.eu.org"
   },
   {
     "tag": "DIV",
     "id": null,
     "class": "ProfileNavigationDrawer_drawer-header__qaFay",
-    "text": "Christina Hayeskalawssimatrix+6802@gmail.com"
+    "text": "Kim Bowerskalawssimatrix+0bowers@ziw0tempemail.eu.org"
   },
   {
     "tag": "SPAN",
     "id": null,
     "class": "ProfileNavigationDrawer_drawer-header-name__YmrRg",
-    "text": "Christina Hayes"
+    "text": "Kim Bowers"
   },
   {
     "tag": "SPAN",
     "id": null,
     "class": "ProfileNavigationDrawer_drawer-header-email__PfQaz",
-    "text": "kalawssimatrix+6802@gmail.com"
+    "text": "kalawssimatrix+0bowers@ziw0tempemail.eu.org"
   },
   {
     "tag": "BUTTON",

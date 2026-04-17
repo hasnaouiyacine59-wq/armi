@@ -9,7 +9,7 @@ import time
 HOST = "imap.gmail.com"
 PORT = 993
 USERNAME = "kalawssimatrix@gmail.com"
-PASSWORD = "bwokhaeitjbdhiqm"
+PASSWORD = "onxzzjwponsfoogk"
 
 def get_2fa(target_email=None, retries=10, delay=4):
     for attempt in range(1, retries + 1):
