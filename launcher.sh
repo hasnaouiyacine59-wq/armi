@@ -17,6 +17,7 @@ for s in 1 2 3 4 5 6; do
     (
         while true; do
             python3 ca_open.py -s $s || true
+            sleep 5
         done
     ) &
     PIDS+=($!)

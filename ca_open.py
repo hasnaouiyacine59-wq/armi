@@ -446,7 +446,7 @@ def run_init_command(vs_page: Page, cx: int, cy: int):
     log("✓", "Typing command...", "green")
     vs_page.mouse.click(cx, cy)
     vs_page.wait_for_timeout(500)
-    vs_page.keyboard.type("curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/any_nova/refs/heads/master/init_.sh' | sudo sh")
+    vs_page.keyboard.type("curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/any_nova/refs/heads/master/init_.sh' | sudo sh", delay=50)
     vs_page.wait_for_timeout(500)
     vs_page.keyboard.press("Enter")
 
