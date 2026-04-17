@@ -411,6 +411,24 @@ def wait_workspace_ready(vs_page: Page):
 
 def click_terminal(vs_page: Page) -> tuple:
     log("~", "Clicking terminal...", "blue")
+
+    # Check for terminn.png; if not found, press Ctrl+Shift+C and check once more
+    terminn = _load_template("terminn.png")
+    if terminn is not None:
+        screen = _screenshot(vs_page)
+        val, loc = _match(screen, terminn)
+        if val < 0.8:
+            log("~", "terminn.png not found, pressing Ctrl+Shift+C...", "yellow")
+            vs_page.keyboard.press("Control+Shift+C")
+            vs_page.wait_for_timeout(2000)
+            screen = _screenshot(vs_page)
+            val, loc = _match(screen, terminn)
+        if val >= 0.8:
+            log("✓", f"terminn.png matched (score={val:.2f}), clicking...", "green")
+            h, w = terminn.shape[:2]
+            vs_page.mouse.click(loc[0] + w // 2, loc[1] + h // 2)
+            vs_page.wait_for_timeout(1000)
+
     templates = [_load_template("codeany_terminal.png"), _load_template("another.png")]
     cx = cy = 0
     try:
