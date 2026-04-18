@@ -126,6 +126,10 @@ def _dump_elements(page: Page, session_name: str):
     if any("CREATING" in (el.get("text") or "") for el in elements):
         log("!", "Workspace CREATING detected — deleting...", "yellow")
         _delete_started_workspace(page)
+    
+    if any("ARCHIVED" in (el.get("text") or "") for el in elements):
+        log("!", "Workspace ARCHIVED detected — deleting...", "yellow")
+        _delete_started_workspace(page)
 
 
 def _is_session_expired(page: Page) -> bool:
@@ -357,7 +361,7 @@ def open_vscode(page: Page, context: BrowserContext) -> Page:
         if time.time() > deadline:
             log("!", "Workspace setup exceeded 2 minutes, exiting.", "red")
             raise RuntimeError("Workspace setup timeout")
-        log("~", "Workspace still setting up, waiting 15s...", "yellow")
+        log("~", "Workspace still setting up, waiting 30s...", "yellow")
         
         # Check workspace setup state
         setup_elements = vs_page.evaluate("""() => {
@@ -374,6 +378,36 @@ def open_vscode(page: Page, context: BrowserContext) -> Page:
         print(f"  - Main message: \"{setup_elements.get('setupMessage')}\"")
         print(f"  - Status: Workspace is in {setup_elements.get('setupPhase')} phase")
         print(f"  - Terminal container present: {setup_elements.get('hasTerminalContainer')}")
+        
+        # Display terminal text and all page text
+        page_content = vs_page.evaluate("""() => {
+            // Get terminal text from canvas or text elements
+            const terminalTexts = Array.from(document.querySelectorAll('.xterm-text-layer, .terminal, .xterm-screen')).map(el => el.innerText).filter(text => text && text.trim());
+            
+            // Get all visible text from page
+            const allText = Array.from(document.querySelectorAll('*')).map(el => el.innerText).filter(text => text && text.trim() && text.length > 3);
+            
+            return {
+                terminalTexts: terminalTexts,
+                allPageText: [...new Set(allText)].slice(0, 10) // Remove duplicates, limit to 10
+            };
+        }""")
+        
+        if page_content.get('terminalTexts'):
+            print(f"[debug] Terminal text found:")
+            for i, text in enumerate(page_content.get('terminalTexts')[:3]):  # Show first 3
+                print(f"  Terminal {i+1}: {text[:100]}...")
+        
+        print(f"[debug] All page text (first 5):")
+        for i, text in enumerate(page_content.get('allPageText', [])[:5]):
+            print(f"  {i+1}: {text[:80]}...")
+        
+        # Check for "Setup is taking longer than usual" and refresh if found
+        if setup_elements.get('setupMessage') and "Setup is taking longer than usual" in setup_elements.get('setupMessage'):
+            log("!", "Setup taking longer than usual - refreshing page...", "yellow")
+            vs_page.reload()
+            vs_page.wait_for_load_state("networkidle", timeout=60000)
+            continue
         
         # Dump HTML and fetch tests
         html_content = vs_page.content()
@@ -399,7 +433,7 @@ def open_vscode(page: Page, context: BrowserContext) -> Page:
             for test in tests[:5]:  # Print first 5
                 print(f"  {test['tag']}: {test['text']} (class: {test['class']}, id: {test['id']})")
         
-        time.sleep(15)
+        time.sleep(30)
         elements = vs_page.evaluate("""() =>
             Array.from(document.querySelectorAll('*')).map(el => ({
                 tag: el.tagName, text: el.innerText?.slice(0, 100) || null,
