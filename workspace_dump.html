@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="en" class="light"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Codeanywhere</title>
+
+  <link rel="icon" type="image/x-icon" href="/status/branding/assets/favicon.ico">
+  <link rel="stylesheet" href="/status/vendor.css">
+  <link rel="stylesheet" href="/status/main.css">
+  <link rel="stylesheet" href="/status/branding/assets/styles/theme.css">
+<style>/**
+ * Copyright (c) 2014 The xterm.js authors. All rights reserved.
+ * Copyright (c) 2012-2013, Christopher Jeffrey (MIT License)
+ * https://github.com/chjj/term.js
+ * @license MIT
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * Originally forked from (with the author's permission):
+ *   Fabrice Bellard's javascript vt100 for jslinux:
+ *   http://bellard.org/jslinux/
+ *   Copyright (c) 2011 Fabrice Bellard
+ *   The original design remains. The terminal itself
+ *   has been extended to include xterm CSI codes, among
+ *   other features.
+ */
+
+/**
+ *  Default styles for xterm.js
+ */
+
+.xterm {
+    font-feature-settings: "liga" 0;
+    position: relative;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.xterm.focus,
+.xterm:focus {
+    outline: none;
+}
+
+.xterm .xterm-helpers {
+    position: absolute;
+    top: 0;
+    /**
+     * The z-index of the helpers must be higher than the canvases in order for
+     * IMEs to appear on top.
+     */
+    z-index: 5;
+}
+
+.xterm .xterm-helper-textarea {
+    /*
+     * HACK: to fix IE's blinking cursor
+     * Move textarea out of the screen to the far left, so that the cursor is not visible.
+     */
+    position: absolute;
+    opacity: 0;
+    left: -9999em;
+    top: 0;
+    width: 0;
+    height: 0;
+    z-index: -5;
+    /** Prevent wrapping so the IME appears against the textarea at the correct position */
+    white-space: nowrap;
+    overflow: hidden;
+    resize: none;
+}
+
+.xterm .composition-view {
+    /* TODO: Composition position got messed up somewhere */
+    background: #000;
+    color: #FFF;
+    display: none;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.xterm .composition-view.active {
+    display: block;
+}
+
+.xterm .xterm-viewport {
+    /* On OS X this is required in order for the scroll bar to appear fully opaque */
+    background-color: #000;
+    overflow-y: scroll;
+    cursor: default;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.xterm .xterm-screen {
+    position: relative;
+}
+
+.xterm .xterm-screen canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.xterm .xterm-scroll-area {
+    visibility: hidden;
+}
+
+.xterm-char-measure-element {
+    display: inline-block;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: -9999em;
+    line-height: normal;
+}
+
+.xterm {
+    cursor: text;
+}
+
+.xterm.enable-mouse-events {
+    /* When mouse events are enabled (eg. tmux), revert to the standard pointer cursor */
+    cursor: default;
+}
+
+.xterm.xterm-cursor-pointer {
+    cursor: pointer;
+}
+
+.xterm.column-select.focus {
+    /* Column selection mode */
+    cursor: crosshair;
+}
+
+.xterm .xterm-accessibility,
+.xterm .xterm-message {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    color: transparent;
+}
+
+.xterm .live-region {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.xterm-dim {
+    opacity: 0.5;
+}
+
+.xterm-underline {
+    text-decoration: underline;
+}
+</style></head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"><div class="WorkspaceLogs_layout-wrapper__dx8u6"><div class="WorkspaceLogs_logs-wrapper__OsDWY"><div class="WorkspaceLogs_header__wCJ+g"><img class="WorkspaceLogs_logo__7bHGu" src="/status/branding/assets/img/logo/logo-light-mode.svg" alt="Logo"><span class="SlashDivider_slash-divider__WDnAm">/</span><span class="WorkspaceLogs_top-level-message__zu6NS">Setting up your workspace</span></div><div class="terminals-container"><div class="WorkspaceLogs_terminal-wrapper__0WZ36 WorkspaceLogs_terminal-wrapper--first__MvzjK"><div dir="ltr" class="terminal xterm" tabindex="0"><div class="xterm-viewport" style="background-color: rgb(22, 22, 22);"><div class="xterm-scroll-area" style="height: 64px;"></div></div><div class="xterm-screen" style="width: 672px; height: 32px;"><div class="xterm-helpers"><textarea class="xterm-helper-textarea" aria-label="Terminal input" aria-multiline="false" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0"></textarea><span class="xterm-char-measure-element" aria-hidden="true" style="font-family: &quot;Berkeley Mono&quot;, monospace; font-size: 13px;">W</span><div class="composition-view"></div></div><canvas class="xterm-text-layer" width="672" height="32" style="z-index: 0; width: 672px; height: 32px;"></canvas><canvas class="xterm-selection-layer" width="672" height="32" style="z-index: 1; width: 672px; height: 32px;"></canvas><canvas class="xterm-link-layer" width="672" height="32" style="z-index: 2; width: 672px; height: 32px;"></canvas><canvas class="xterm-cursor-layer" width="672" height="32" style="z-index: 3; width: 672px; height: 32px;"></canvas></div></div></div><div class="WorkspaceLogs_terminal-wrapper__0WZ36 WorkspaceLogs_terminal-wrapper--second__m881D WorkspaceLogs_terminal-wrapper--text-hidden__oDz6l"><div dir="ltr" class="terminal xterm" tabindex="0"><div class="xterm-viewport" style="background-color: rgb(22, 22, 22);"><div class="xterm-scroll-area" style="height: 256px;"></div></div><div class="xterm-screen" style="width: 672px; height: 240px;"><div class="xterm-helpers"><textarea class="xterm-helper-textarea" aria-label="Terminal input" aria-multiline="false" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0"></textarea><span class="xterm-char-measure-element" aria-hidden="true" style="font-family: &quot;Berkeley Mono&quot;, monospace; font-size: 13px;">W</span><div class="composition-view"></div></div><canvas class="xterm-text-layer" width="672" height="240" style="z-index: 0; width: 672px; height: 240px;"></canvas><canvas class="xterm-selection-layer" width="672" height="240" style="z-index: 1; width: 672px; height: 240px;"></canvas><canvas class="xterm-link-layer" width="672" height="240" style="z-index: 2; width: 672px; height: 240px;"></canvas><canvas class="xterm-cursor-layer" width="672" height="240" style="z-index: 3; width: 672px; height: 240px;"></canvas></div></div></div></div><div class="Tip_wrapper__Lb3R9"><svg class="Tip_icon__1oPtA" width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 2C0 0.895432 0.89543 0 2 0H10C10.2652 0 10.5196 0.105357 10.7071 0.292893L15.7071 5.29289C15.8946 5.48043 16 5.73478 16 6V18C16 19.1046 15.1046 20 14 20H2C0.895432 20 0 19.1046 0 18V2ZM13.5858 6L10 2.41421V6H13.5858ZM8 2L2 2V18H14V8H9C8.44772 8 8 7.55228 8 7V2ZM4 11C4 10.4477 4.44772 10 5 10H11C11.5523 10 12 10.4477 12 11C12 11.5523 11.5523 12 11 12H5C4.44772 12 4 11.5523 4 11ZM4 15C4 14.4477 4.44772 14 5 14H11C11.5523 14 12 14.4477 12 15C12 15.5523 11.5523 16 11 16H5C4.44772 16 4 15.5523 4 15Z" fill="#0D0D0D"></path></svg><div class="Tip_text__Uy64x">Standardize your project workspace by adding a <a class="Tip_link__7k3ML" href="https://code.visualstudio.com/docs/devcontainers/create-dev-container" target="_blank" rel="noopener noreferrer">devcontainer.json</a> file in your repo.</div></div></div></div></div>
+  <script src="/status/runtime.js" type="module"></script>
+  <script src="/status/vendor.js" type="module"></script>
+  <script src="/status/main.js" type="module"></script>
+
+
+</body></html>

@@ -98,6 +98,8 @@ def _delete_started_workspace(page: Page):
 
 def _dump_elements(page: Page, session_name: str):
     page.wait_for_load_state("networkidle", timeout=30000)
+    log("~", "Waiting for elements to load completely...", "yellow")
+    page.wait_for_timeout(10000)  # Wait 10 seconds for slow elements
     elements = page.evaluate("""() =>
         Array.from(document.querySelectorAll('*')).map(el => ({
             tag: el.tagName, id: el.id || null,
@@ -110,8 +112,19 @@ def _dump_elements(page: Page, session_name: str):
         json.dump(elements, df, indent=2)
     log("✓", f"Elements dumped to {dump_path}", "green")
 
+    # Debug: Print all text containing workspace-related keywords
+    workspace_texts = [el.get("text", "") for el in elements if el.get("text") and 
+                      any(keyword.lower() in el.get("text", "").lower() 
+                          for keyword in ["STARTED", "CREATING", "workspace", "create"])]
+    if workspace_texts:
+        print(f"[debug] Found workspace-related texts: {workspace_texts[:5]}")
+
     if any("STARTED" in (el.get("text") or "") for el in elements):
         log("!", "Workspace STARTED detected — deleting...", "yellow")
+        _delete_started_workspace(page)
+    
+    if any("CREATING" in (el.get("text") or "") for el in elements):
+        log("!", "Workspace CREATING detected — deleting...", "yellow")
         _delete_started_workspace(page)
 
 
@@ -198,6 +211,18 @@ def relogin(page: Page, context: BrowserContext, cookies_file: str):
     _fill_bitbucket_login(page, email, password)
     log("✓", "Logged in, saving new cookies...", "green")
     _save_cookies(context, cookies_file)
+
+
+def check_next_step(page: Page):
+    # Dump HTML for next step analysis
+    html_content = page.content()
+    with open("next_5_step_dump.html", "w") as f:
+        f.write(html_content)
+    log("~", "HTML dumped to next_5_step_dump.html", "yellow")
+    
+    # Wait for user input to proceed
+    input("Check dump and press Enter to continue to Step 5...")
+    log("✓", "Proceeding to Step 5", "green")
 
 
 # ── Step 5: Create workspace ──────────────────────────────────────────────────
@@ -333,6 +358,47 @@ def open_vscode(page: Page, context: BrowserContext) -> Page:
             log("!", "Workspace setup exceeded 2 minutes, exiting.", "red")
             raise RuntimeError("Workspace setup timeout")
         log("~", "Workspace still setting up, waiting 15s...", "yellow")
+        
+        # Check workspace setup state
+        setup_elements = vs_page.evaluate("""() => {
+            const setupMsg = document.querySelector('.WorkspaceLogs_top-level-message__zu6NS');
+            const terminalContainer = document.querySelector('.terminals-container');
+            return {
+                setupMessage: setupMsg ? setupMsg.innerText : null,
+                hasTerminalContainer: !!terminalContainer,
+                setupPhase: setupMsg ? 'initialization' : 'unknown'
+            };
+        }""")
+        
+        print(f"[debug] Workspace Setup State:")
+        print(f"  - Main message: \"{setup_elements.get('setupMessage')}\"")
+        print(f"  - Status: Workspace is in {setup_elements.get('setupPhase')} phase")
+        print(f"  - Terminal container present: {setup_elements.get('hasTerminalContainer')}")
+        
+        # Dump HTML and fetch tests
+        html_content = vs_page.content()
+        with open("workspace_dump.html", "w") as f:
+            f.write(html_content)
+        
+        tests = vs_page.evaluate("""() => {
+            const testElements = Array.from(document.querySelectorAll('*')).filter(el => 
+                el.innerText && (el.innerText.toLowerCase().includes('test') || 
+                el.className.toLowerCase().includes('test') || 
+                el.id.toLowerCase().includes('test'))
+            );
+            return testElements.map(el => ({
+                tag: el.tagName,
+                text: el.innerText?.slice(0, 50),
+                class: el.className,
+                id: el.id
+            }));
+        }""")
+        
+        if tests:
+            print(f"[debug] Found {len(tests)} test elements:")
+            for test in tests[:5]:  # Print first 5
+                print(f"  {test['tag']}: {test['text']} (class: {test['class']}, id: {test['id']})")
+        
         time.sleep(15)
         elements = vs_page.evaluate("""() =>
             Array.from(document.querySelectorAll('*')).map(el => ({
@@ -503,6 +569,7 @@ def main():
         browser, context = launch_browser(p)
         try:
             page      = open_dashboard(context, cookies_file, session_name)  # step 3
+            check_next_step(page)                                             # step 4.5
             page      = create_workspace(page, context)                       # step 5
             vs_page   = open_vscode(page, context)                           # step 6
             wait_workspace_ready(vs_page)                                     # step 7
