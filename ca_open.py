@@ -223,9 +223,6 @@ def check_next_step(page: Page):
     with open("next_5_step_dump.html", "w") as f:
         f.write(html_content)
     log("~", "HTML dumped to next_5_step_dump.html", "yellow")
-    
-    # Wait for user input to proceed
-    input("Check dump and press Enter to continue to Step 5...")
     log("✓", "Proceeding to Step 5", "green")
 
 
