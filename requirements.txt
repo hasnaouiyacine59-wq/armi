@@ -1,6 +1,6 @@
+requests
 faker
-playwright
+camoufox
 opencv-python
 numpy
-pyautogui
-pyperclip
+psutil
