@@ -1,0 +1,2636 @@
+[
+  {
+    "tag": "HTML",
+    "id": null,
+    "class": "light",
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nG\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
+  },
+  {
+    "tag": "HEAD",
+    "id": null,
+    "class": null,
+    "text": "\n  \n  \n  \n  \n  \n  \n  \n  \n  \n    window.dataLayer = window.dataLayer || [];\n    function gtag() { dat"
+  },
+  {
+    "tag": "META",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "META",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "META",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "META",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": "\n    window.dataLayer = window.dataLayer || [];\n    function gtag() { dataLayer.push(arguments); }\n "
+  },
+  {
+    "tag": "TITLE",
+    "id": null,
+    "class": null,
+    "text": "Codeanywhere"
+  },
+  {
+    "tag": "STYLE",
+    "id": null,
+    "class": null,
+    "text": "\n    .subscription-button {\n      background-color: var(--color-primary);\n      border: 1px solid va"
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": "\n    Sentry.onLoad(function () {\n      Sentry.init({\n        dsn: 'https://bc9c09515f2b190119b74cb3e"
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": "\n    function checkAndReplaceNavigation() {\n      // Find all navigation item links\n      var naviga"
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": "\n    const quotaMapping = [\n      { name: 'Free', quotaId: '00000000-0000-0000-0000-000000000000', c"
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": "\n    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g("
+  },
+  {
+    "tag": "LINK",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "LINK",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "LINK",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "LINK",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "STYLE",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "BODY",
+    "id": null,
+    "class": null,
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nG\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
+  },
+  {
+    "tag": "NOSCRIPT",
+    "id": null,
+    "class": null,
+    "text": "You need to enable JavaScript to run this app."
+  },
+  {
+    "tag": "DIV",
+    "id": "root",
+    "class": null,
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nG\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "PageLayout_page__5ZfW5",
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nG\nWorkspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspa"
+  },
+  {
+    "tag": "HEADER",
+    "id": null,
+    "class": "Header_header__yNbCJ",
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team\nG"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "HeaderControl_control__Naasg",
+    "text": "/\nPersonal\nPersonal\nFREE\nCreate team"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "HeaderControl_hamburger-icon-wrapper__w8GKE",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "HeaderControl_logo-wrapper__ciqNp",
+    "text": null
+  },
+  {
+    "tag": "IMG",
+    "id": null,
+    "class": "HeaderControl_logo__9SX-Q",
+    "text": null
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "SlashDivider_slash-divider__WDnAm",
+    "text": "/"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_team-dropdown-wrapper__zn-OS",
+    "text": "Personal\nPersonal\nFREE\nCreate team"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "TeamDropdown_selected-team__NWtyT",
+    "text": "Personal"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_team-label__aY71p TeamDropdown_nav__LIT2o",
+    "text": "Personal"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "rect",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Truncate_truncate__UooWf",
+    "text": "Personal"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_team-dropdown__1VfGO",
+    "text": "Personal\nFREE\nCreate team"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SearchInput_search-wrapper__y5beB TeamDropdown_search__ZO38M",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "INPUT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_menu__LgfzS",
+    "text": "Personal\nFREE"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_option__WC7c9 TeamDropdown_option-active__Tskzl",
+    "text": "Personal\nFREE"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_icon__wSxq5",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_team-label__aY71p",
+    "text": "Personal\nFREE"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "Tag_tag__anPxj quota-tag",
+    "text": "FREE"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_new-team-option-wrapper__foTdo",
+    "text": "Create team"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Create team"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_option__WC7c9",
+    "text": "Create team"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_icon__wSxq5",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "TeamDropdown_team-label__aY71p",
+    "text": "Create team"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "HeaderProfile_profile__Q1K-D",
+    "text": "G"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "HeaderProfile_avatar-wrapper__MB35F",
+    "text": "G"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Avatar_avatar__cv62w",
+    "text": "G"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "HeaderProfile_profile-dropdown__DFHEP",
+    "text": "Gary Thomasandrmidal84a+0thomas@gmail.comProfileSettingsDevice ActivityNotificationsEnv VariablesSSH"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "HeaderProfile_profile-dropdown-header__2bSdg",
+    "text": "Gary Thomasandrmidal84a+0thomas@gmail.com"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "HeaderProfile_profile-dropdown-header-name__WfkwT",
+    "text": "Gary Thomas"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "HeaderProfile_profile-dropdown-header-email__9c9cO",
+    "text": "andrmidal84a+0thomas@gmail.com"
+  },
+  {
+    "tag": "NAV",
+    "id": null,
+    "class": "ProfileNavigation_navigation__MfJRO",
+    "text": "ProfileSettingsDevice ActivityNotificationsEnv VariablesSSH KeysAboutLogout"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Profile"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Profile"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Settings"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Settings"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Device Activity"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Device Activity"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Notifications"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Notifications"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Env Variables"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Env Variables"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "SSH Keys"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "SSH Keys"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "About"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "About"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Logout"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj ProfileNavigation_logout-nav-item__++zWs",
+    "text": "Logout"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ContentBelowHeader_content-below-header__R5Sjs",
+    "text": "Workspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade\nWorkspaces\nCreate\ngithub.com\n/\nCodeanywhere-Te"
+  },
+  {
+    "tag": "ASIDE",
+    "id": null,
+    "class": "Sidebar_sidebar__RjQ84",
+    "text": "Workspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade"
+  },
+  {
+    "tag": "NAV",
+    "id": null,
+    "class": "SidebarNavigation_navigation__Y1--a",
+    "text": "Workspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade"
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigation_navigation-menu__DMK-S",
+    "text": "Workspaces\nUsage\nTEAM\nSubscription\nLINKS\nDocs\nUpgrade"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group__+Va67",
+    "text": "Workspaces\nUsage"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-header__gIPPX",
+    "text": null
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-submenu__r3nAe SidebarNavigationItemGroup_navigation-submenu-expanded__SLVKI",
+    "text": "Workspaces\nUsage"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Workspaces"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ SidebarNavigationItem_navigation-item-link--active__kY8Gk",
+    "text": "Workspaces"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Usage"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ",
+    "text": "Usage"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group__+Va67",
+    "text": "TEAM\nSubscription"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-header__gIPPX SidebarNavigationItemGroup_navigation-item-group-header-pointer__IElPE",
+    "text": "TEAM"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-label__i3aaN",
+    "text": "TEAM"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-submenu__r3nAe SidebarNavigationItemGroup_navigation-submenu-expanded__SLVKI",
+    "text": "Subscription"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Subscription"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ",
+    "text": "Subscription"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group__+Va67",
+    "text": "LINKS\nDocs"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-header__gIPPX",
+    "text": "LINKS"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-label__i3aaN",
+    "text": "LINKS"
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-submenu__r3nAe SidebarNavigationItemGroup_navigation-submenu-expanded__SLVKI",
+    "text": "Docs"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Docs"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ",
+    "text": "Docs"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Upgrade"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Upgrade"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "subscription-button",
+    "text": "Upgrade"
+  },
+  {
+    "tag": "MAIN",
+    "id": null,
+    "class": "MainContent_main-content__i28s0",
+    "text": "Workspaces\nCreate\ngithub.com\n/\nCodeanywhere-Templates\n/\nempty\nempty\nSTARTED\n3 MINUTES AGO\nVS Code"
+  },
+  {
+    "tag": "H1",
+    "id": null,
+    "class": "Heading_heading__6oKdZ",
+    "text": "Workspaces"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "list",
+    "text": "Create\ngithub.com\n/\nCodeanywhere-Templates\n/\nempty\nempty\nSTARTED\n3 MINUTES AGO\nVS Code"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ListActionRow_list-action-row__ahEXd",
+    "text": "Create"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SearchInput_search-wrapper__y5beB",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "INPUT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Create"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "Button_button__dboXH Button_button--color-primary__DUSDF Button_button--variant-contained__42fXM Button_button--size-normal__DeOhr",
+    "text": "Create"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "list-items WorkspacesList_list__bk7lL",
+    "text": "github.com\n/\nCodeanywhere-Templates\n/\nempty\nempty\nSTARTED\n3 MINUTES AGO\nVS Code"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_workspace-card__49Rw8",
+    "text": "github.com\n/\nCodeanywhere-Templates\n/\nempty\nempty\nSTARTED\n3 MINUTES AGO\nVS Code"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_main-content-section__2eE4W",
+    "text": "github.com\n/\nCodeanywhere-Templates\n/\nempty\nempty\nSTARTED\n3 MINUTES AGO\nVS Code"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_main-content-details-wrapper__NAnDM",
+    "text": "github.com\n/\nCodeanywhere-Templates\n/\nempty\nempty\nSTARTED\n3 MINUTES AGO"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "GitContext_wrapper__6MVY3",
+    "text": "github.com\n/\nCodeanywhere-Templates\n/\nempty"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "GitContext_link__L9Qqz",
+    "text": "github.com\n/\nCodeanywhere-Templates\n/\nempty"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": null,
+    "text": "github.com"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "SlashDivider_slash-divider__WDnAm",
+    "text": "/"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": null,
+    "text": "Codeanywhere-Templates"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "SlashDivider_slash-divider__WDnAm",
+    "text": "/"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": null,
+    "text": "empty"
+  },
+  {
+    "tag": "H2",
+    "id": null,
+    "class": "Heading_heading__6oKdZ WorkspaceCard_workspace-name-row__PjpC3",
+    "text": "empty"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "workspace-name",
+    "text": "empty"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Truncate_truncate__UooWf",
+    "text": "empty"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_workspace-icon-buttons-container__svWn3",
+    "text": null
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "WorkspaceCard_rename-icon-wrapper__C2D-u",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Tooltip_tooltip-wrapper__YVSLq",
+    "text": null
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "Tooltip_tooltip-content__g36kh tooltip-content--direction-top",
+    "text": "Inactive workspaces are deleted 14 days after they were last stopped. Pinned workspaces are never de"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "WorkspaceCard_pin-icon-wrapper__Sqy+i",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_activity-row__vOmwt",
+    "text": "STARTED\n3 MINUTES AGO"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "WorkspaceCard_workspace-state__GLsX1 WorkspaceCard_workspace-state--started__jlR3C",
+    "text": "STARTED"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "WorkspaceCard_last-activity__g5iZg",
+    "text": "3 MINUTES AGO"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_open-workspace-button-wrapper__i3CGF",
+    "text": "VS Code"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "Button_button__dboXH Button_button--color-secondary__hMPBd Button_button--variant-outlined__pPGOu Button_button--size-normal__DeOhr WorkspaceCard_open-workspace-button__oSUki",
+    "text": "VS Code"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "CodeEditorInfo_wrapper__lJrYP WorkspaceCard_code-editor-info__Z+tJe",
+    "text": "VS Code"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "title",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "defs",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "linearGradient",
+    "id": "linearGradient-1",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "stop",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "stop",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "g",
+    "id": "Page-1",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "g",
+    "id": "Artboard",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "g",
+    "id": "vscode-remote-icon-(1)",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": "Path",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": "Path",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": "Path",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "g",
+    "id": "Group",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": "Shape",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "circle",
+    "id": "Oval",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": "Shape",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "CodeEditorInfo_text-container__jcwEj",
+    "text": "VS Code"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "CodeEditorInfo_name__zea4f",
+    "text": "VS Code"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_toggle-card-button-section__PvOBj",
+    "text": null
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "WorkspaceCard_toggle-card-button__mVK6h",
+    "text": null
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "WorkspaceCard_expand-details__rLYre",
+    "text": "Expand details"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_extra-content-section__SLjwa",
+    "text": "Launch remote environmentVS Code BrowserVS Code\u2022BrowserConnect via SSHYou need to add a public key v"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_workspace-access__G6DLX",
+    "text": "Launch remote environmentVS Code BrowserVS Code\u2022BrowserConnect via SSHYou need to add a public key v"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_workspace-access__labeled-element__3ZVVZ",
+    "text": "Launch remote environmentVS Code BrowserVS Code\u2022Browser"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "WorkspaceCard_workspace-access-label__6S0cT",
+    "text": "Launch remote environment"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "CodeEditorDropdown_container__AFdlb css-b62m3t-container",
+    "text": "VS Code BrowserVS Code\u2022Browser"
+  },
+  {
+    "tag": "SPAN",
+    "id": "react-select-2-live-region",
+    "class": "css-7pg0cj-a11yText",
+    "text": null
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "css-7pg0cj-a11yText",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "CodeEditorDropdown_control__QiGsC css-13cymwt-control",
+    "text": "VS Code BrowserVS Code\u2022Browser"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "CodeEditorDropdown_value-container__26b9Z css-hlgwow",
+    "text": "VS Code BrowserVS Code\u2022Browser"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "CodeEditorDropdown_single-value__Wa525 css-1dimb5e-singleValue",
+    "text": "VS Code BrowserVS Code\u2022Browser"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "CodeEditorInfo_wrapper__lJrYP",
+    "text": "VS Code BrowserVS Code\u2022Browser"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "title",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "defs",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "linearGradient",
+    "id": "linearGradient-1",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "stop",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "stop",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "g",
+    "id": "Page-1",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "g",
+    "id": "Artboard",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "g",
+    "id": "vscode-remote-icon-(1)",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": "Path",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": "Path",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": "Path",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "g",
+    "id": "Group",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": "Shape",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "circle",
+    "id": "Oval",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": "Shape",
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "CodeEditorInfo_text-container__jcwEj",
+    "text": "VS Code\u2022Browser"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "CodeEditorInfo_name__zea4f",
+    "text": "VS Code"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "CodeEditorInfo_divider__Z6sEy",
+    "text": "\u2022"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "CodeEditorInfo_environment__FFql7",
+    "text": "Browser"
+  },
+  {
+    "tag": "INPUT",
+    "id": "react-select-2-input",
+    "class": "css-1hac4vs-dummyInput",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": " css-1wy0on6",
+    "text": null
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "CodeEditorDropdown_indicator-separator__BW9HQ css-1u9des2-indicatorSeparator",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "CodeEditorDropdown_dropdown-indicator__-dG30",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_workspace-access__labeled-element__3ZVVZ",
+    "text": "Connect via SSHYou need to add a public key via the SSH Keys page found in the user menu.Public KeyA"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "WorkspaceCard_workspace-access-label__6S0cT",
+    "text": "Connect via SSH"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_connect-via-ssh__E60YF",
+    "text": "You need to add a public key via the SSH Keys page found in the user menu.Public KeyAccess TokenAnyo"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Tabs_navigation-tabs__ESa9m",
+    "text": "You need to add a public key via the SSH Keys page found in the user menu.Public KeyAccess Token"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Tooltip_tooltip-wrapper__YVSLq",
+    "text": "You need to add a public key via the SSH Keys page found in the user menu.Public Key"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "Tooltip_tooltip-content__g36kh tooltip-content--direction-top",
+    "text": "You need to add a public key via the SSH Keys page found in the user menu."
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "Tabs_navigation-tabs__tab__3lSe7 Tabs_navigation-tabs__tab--disabled__rimAo",
+    "text": "Public Key"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "Tabs_navigation-tabs__tab__3lSe7 Tabs_navigation-tabs__tab--active__ZyuIg",
+    "text": "Access Token"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_connect-via-ssh-input-wrapper__j4JmS",
+    "text": null
+  },
+  {
+    "tag": "INPUT",
+    "id": null,
+    "class": "WorkspaceCard_connect-via-ssh-input__e38gH",
+    "text": null
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "CopyToClipboard_copy-icon-wrapper__slAFL WorkspaceCard_connect-via-ssh-copy-icon__lD2qi",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_connect-via-ssh-disclaimer__v0gmU",
+    "text": "Anyone with the following command will be able to connect to this workspace. The command includes a "
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": null,
+    "text": "Anyone with the following command will be able to connect to this workspace. The command includes a "
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_info-grid__pgXTj",
+    "text": "Workspace IDcodeanywhere-templates-e-cu587yeuwkWorkspace classDefault\u20224 CPU, 8GB RAM, 50GB Created a"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "labeled-value-wrapper",
+    "text": "Workspace IDcodeanywhere-templates-e-cu587yeuwk"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "LabeledElement_labeled-value-wrapper__label__5p8tp",
+    "text": "Workspace ID"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "labeled-value-wrapper__element",
+    "text": "codeanywhere-templates-e-cu587yeuwk"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "LabeledValue_value__srTe8",
+    "text": "codeanywhere-templates-e-cu587yeuwk"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Truncate_truncate__UooWf",
+    "text": "codeanywhere-templates-e-cu587yeuwk"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "CopyToClipboard_copy-icon-wrapper__slAFL",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "labeled-value-wrapper",
+    "text": "Workspace classDefault\u20224 CPU, 8GB RAM, 50GB "
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "LabeledElement_labeled-value-wrapper__label__5p8tp",
+    "text": "Workspace class"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "labeled-value-wrapper__element",
+    "text": "Default\u20224 CPU, 8GB RAM, 50GB "
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceClassInfo_wrapper__0s4rR",
+    "text": "Default\u20224 CPU, 8GB RAM, 50GB "
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceClassInfo_content__Cgljj WorkspaceCard_workspace-class__PuHmq",
+    "text": "Default\u20224 CPU, 8GB RAM, 50GB "
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "WorkspaceClassInfo_name__lEfAY",
+    "text": "Default"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "WorkspaceClassInfo_divider__+MH38",
+    "text": "\u2022"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "WorkspaceClassInfo_resources__DmY8I",
+    "text": "4 CPU, 8GB RAM, 50GB "
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_info-grid__subgrid__hmHnL",
+    "text": "Created at27/04/2026, 14:21:27Updated at27/04/2026, 14:21:27"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "labeled-value-wrapper",
+    "text": "Created at27/04/2026, 14:21:27"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "LabeledElement_labeled-value-wrapper__label__5p8tp",
+    "text": "Created at"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "labeled-value-wrapper__element",
+    "text": "27/04/2026, 14:21:27"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "LabeledValue_value__srTe8",
+    "text": "27/04/2026, 14:21:27"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Truncate_truncate__UooWf",
+    "text": "27/04/2026, 14:21:27"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "labeled-value-wrapper",
+    "text": "Updated at27/04/2026, 14:21:27"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "LabeledElement_labeled-value-wrapper__label__5p8tp",
+    "text": "Updated at"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "labeled-value-wrapper__element",
+    "text": "27/04/2026, 14:21:27"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "LabeledValue_value__srTe8",
+    "text": "27/04/2026, 14:21:27"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Truncate_truncate__UooWf",
+    "text": "27/04/2026, 14:21:27"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceCard_info-grid__actions-row__Zo1lp",
+    "text": "StopDeleteSharePrivateEveryone"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "Button_button__dboXH Button_button--color-secondary__hMPBd Button_button--variant-outlined__pPGOu Button_button--size-normal__DeOhr",
+    "text": "Stop"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "Button_button__dboXH Button_button--color-secondary__hMPBd Button_button--variant-outlined__pPGOu Button_button--size-normal__DeOhr",
+    "text": "Delete"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceSharingPolicyDropdown_policy-dropdown-wrapper__l46Ew",
+    "text": "SharePrivateEveryone"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "Button_button__dboXH Button_button--color-secondary__hMPBd Button_button--variant-outlined__pPGOu Button_button--size-normal__DeOhr",
+    "text": "Share"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceSharingPolicyDropdown_policy-dropdown__jkAoF",
+    "text": "PrivateEveryone"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceSharingPolicyDropdown_menu__qMyXA",
+    "text": "PrivateEveryone"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "WorkspaceSharingPolicyDropdown_option__rd+G2",
+    "text": "Private"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceSharingPolicyDropdown_policy-label__kGi2u",
+    "text": "Private"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "WorkspaceSharingPolicyDropdown_untruncated-policy-name__ktNSd",
+    "text": "Private"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "WorkspaceSharingPolicyDropdown_option__rd+G2",
+    "text": "Everyone"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "WorkspaceSharingPolicyDropdown_policy-label__kGi2u",
+    "text": "Everyone"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "WorkspaceSharingPolicyDropdown_untruncated-policy-name__ktNSd",
+    "text": "Everyone"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Dialog_dialog__QQyDg DeleteWorkspaceConfirmationDialog_dialog__bdJIT",
+    "text": "To confirm deletion, please type codeanywhere-templates-e-cu587yeuwk in the field below.CancelDelete"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "DialogHeader_header__PK0Wj",
+    "text": "To confirm deletion, please type codeanywhere-templates-e-cu587yeuwk in the field below."
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "DialogHeader_title__aqE9C",
+    "text": "To confirm deletion, please type codeanywhere-templates-e-cu587yeuwk in the field below."
+  },
+  {
+    "tag": "CODE",
+    "id": null,
+    "class": "Code_code__lPydg",
+    "text": "codeanywhere-templates-e-cu587yeuwk"
+  },
+  {
+    "tag": "FORM",
+    "id": null,
+    "class": "Form_form__GnCzS",
+    "text": "CancelDeleteThis action is irreversible."
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "DialogBody_body__NampB",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "DialogInput_input-wrapper__LaNFJ",
+    "text": null
+  },
+  {
+    "tag": "INPUT",
+    "id": null,
+    "class": "DialogInput_input__Re7C5",
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "DialogFooter_footer__EgCXg",
+    "text": "CancelDeleteThis action is irreversible."
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "DialogFooter_actions__zmkQh",
+    "text": "CancelDelete"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "Button_button__dboXH Button_button--color-secondary__hMPBd Button_button--variant-outlined__pPGOu Button_button--size-small__5nc2O",
+    "text": "Cancel"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "Button_button__dboXH Button_button--color-danger__EiHL9 Button_button--variant-contained__42fXM Button_button--size-small__5nc2O Button_button--disabled__rUN+2",
+    "text": "Delete"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "DialogFooter_disclaimer__DgYsB",
+    "text": "This action is irreversible."
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Drawer_drawer__GpVX7 Drawer_drawer--position-left__z33B+ SidebarNavigationDrawer_drawer__nSwDE",
+    "text": "Dashboard WorkspacesUsageTeam SubscriptionLinks Docs"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "DrawerHeader_header__ayYKG",
+    "text": "Dashboard"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationDrawer_drawer-header__QE+04",
+    "text": "Dashboard"
+  },
+  {
+    "tag": "IMG",
+    "id": null,
+    "class": "SidebarNavigationDrawer_drawer-header-logo__A0Uox",
+    "text": null
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "SidebarNavigationDrawer_drawer-header-title__qjuK4",
+    "text": "Dashboard"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "DrawerHeader_close-icon-wrapper__Jaeuh",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "NAV",
+    "id": null,
+    "class": "SidebarNavigation_navigation__Y1--a",
+    "text": " WorkspacesUsageTeam SubscriptionLinks Docs"
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigation_navigation-menu__DMK-S",
+    "text": " WorkspacesUsageTeam SubscriptionLinks Docs"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group__+Va67",
+    "text": " WorkspacesUsage"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-header__gIPPX",
+    "text": null
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-submenu__r3nAe SidebarNavigationItemGroup_navigation-submenu-expanded__SLVKI",
+    "text": " WorkspacesUsage"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Workspaces"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ SidebarNavigationItem_navigation-item-link--active__kY8Gk",
+    "text": "Workspaces"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Usage"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ",
+    "text": "Usage"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group__+Va67",
+    "text": "Team Subscription"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-header__gIPPX SidebarNavigationItemGroup_navigation-item-group-header-pointer__IElPE",
+    "text": "Team"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-label__i3aaN",
+    "text": "Team"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-submenu__r3nAe SidebarNavigationItemGroup_navigation-submenu-expanded__SLVKI",
+    "text": " Subscription"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Subscription"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ",
+    "text": "Subscription"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group__+Va67",
+    "text": "Links Docs"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-header__gIPPX",
+    "text": "Links"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-item-group-label__i3aaN",
+    "text": "Links"
+  },
+  {
+    "tag": "UL",
+    "id": null,
+    "class": "SidebarNavigationItemGroup_navigation-submenu__r3nAe SidebarNavigationItemGroup_navigation-submenu-expanded__SLVKI",
+    "text": " Docs"
+  },
+  {
+    "tag": "LI",
+    "id": null,
+    "class": "navigation-item",
+    "text": "Docs"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-link__0yNrZ",
+    "text": "Docs"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "SidebarNavigationItem_navigation-item-marker__nwJ2F",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "Drawer_drawer__GpVX7 Drawer_drawer--position-right__47m7X ProfileNavigationDrawer_drawer__zRvP8",
+    "text": "Gary Thomasandrmidal84a+0thomas@gmail.comProfileSettingsDevice ActivityNotificationsEnv VariablesSSH"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "DrawerHeader_header__ayYKG",
+    "text": "Gary Thomasandrmidal84a+0thomas@gmail.com"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationDrawer_drawer-header__qaFay",
+    "text": "Gary Thomasandrmidal84a+0thomas@gmail.com"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "ProfileNavigationDrawer_drawer-header-name__YmrRg",
+    "text": "Gary Thomas"
+  },
+  {
+    "tag": "SPAN",
+    "id": null,
+    "class": "ProfileNavigationDrawer_drawer-header-email__PfQaz",
+    "text": "andrmidal84a+0thomas@gmail.com"
+  },
+  {
+    "tag": "BUTTON",
+    "id": null,
+    "class": "DrawerHeader_close-icon-wrapper__Jaeuh",
+    "text": null
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "NAV",
+    "id": null,
+    "class": "ProfileNavigation_navigation__MfJRO",
+    "text": "ProfileSettingsDevice ActivityNotificationsEnv VariablesSSH KeysAboutLogout"
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Profile"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Profile"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Settings"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Settings"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Device Activity"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Device Activity"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Notifications"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Notifications"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Env Variables"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "Env Variables"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "SSH Keys"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "SSH Keys"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "About"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj",
+    "text": "About"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "A",
+    "id": null,
+    "class": null,
+    "text": "Logout"
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ProfileNavigationItem_navigation-item__ME-dj ProfileNavigation_logout-nav-item__++zWs",
+    "text": "Logout"
+  },
+  {
+    "tag": "svg",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "path",
+    "id": null,
+    "class": {},
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "SCRIPT",
+    "id": null,
+    "class": null,
+    "text": null
+  },
+  {
+    "tag": "DIV",
+    "id": null,
+    "class": "ToastPortal_list__E3GaR",
+    "text": null
+  },
+  {
+    "tag": "IFRAME",
+    "id": null,
+    "class": null,
+    "text": null
+  }
+]
