@@ -98,7 +98,7 @@ def _delete_started_workspace(page: Page):
 
 def _dump_elements(page: Page, session_name: str):
     page.wait_for_load_state("networkidle", timeout=30000)
-    log("~", "Waiting for elements to load completely...", "yellow")
+    # log("~", "Waiting for elements to load completely...", "yellow")
     page.wait_for_timeout(10000)  # Wait 10 seconds for slow elements
     elements = page.evaluate("""() =>
         Array.from(document.querySelectorAll('*')).map(el => ({
@@ -107,17 +107,17 @@ def _dump_elements(page: Page, session_name: str):
             text: el.innerText?.slice(0, 100) || null,
         }))
     """)
-    dump_path = os.path.join(os.path.dirname(__file__), f"dump_{session_name}.json")
-    with open(dump_path, "w") as df:
-        json.dump(elements, df, indent=2)
-    log("✓", f"Elements dumped to {dump_path}", "green")
+    # dump_path = os.path.join(os.path.dirname(__file__), f"dump_{session_name}.json")
+    # with open(dump_path, "w") as df:
+    #     json.dump(elements, df, indent=2)
+    # log("✓", f"Elements dumped to {dump_path}", "green")
 
-    # Debug: Print all text containing workspace-related keywords
-    workspace_texts = [el.get("text", "") for el in elements if el.get("text") and 
-                      any(keyword.lower() in el.get("text", "").lower() 
-                          for keyword in ["STARTED", "CREATING", "workspace", "create"])]
-    if workspace_texts:
-        print(f"[debug] Found workspace-related texts: {workspace_texts[:5]}")
+    # # Debug: Print all text containing workspace-related keywords
+    # workspace_texts = [el.get("text", "") for el in elements if el.get("text") and
+    #                   any(keyword.lower() in el.get("text", "").lower()
+    #                       for keyword in ["STARTED", "CREATING", "workspace", "create"])]
+    # if workspace_texts:
+    #     print(f"[debug] Found workspace-related texts: {workspace_texts[:5]}")
 
     if any("STARTED" in (el.get("text") or "") for el in elements):
         log("!", "Workspace STARTED detected — deleting...", "yellow")
@@ -134,6 +134,45 @@ def _dump_elements(page: Page, session_name: str):
 
 def _is_session_expired(page: Page) -> bool:
     return page.query_selector('a#social-bitbucket') is not None
+
+
+def _check_usage(page: Page):
+    page.goto("https://app.codeanywhere.com/usage", timeout=30000)
+    page.wait_for_load_state("networkidle", timeout=30000)
+    page.wait_for_timeout(3000)
+
+    elements = page.evaluate("""() =>
+        Array.from(document.querySelectorAll('*')).map(el => ({
+            tag: el.tagName, id: el.id || null,
+            class: el.className || null,
+            text: el.innerText?.slice(0, 150) || null,
+        }))
+    """)
+    # with open(os.path.join(os.path.dirname(__file__), "dump_usage.json"), "w") as f:
+    #     json.dump(elements, f, indent=2)
+    # log("~", "Usage page elements dumped to dump_usage.json", "yellow")
+
+    # Print USED CREDITS line
+    credits = page.evaluate("""() => {
+        const els = Array.from(document.querySelectorAll('*'));
+        const header = els.find(el => el.children.length === 0 && el.innerText?.trim() === 'USED CREDITS');
+        if (header) {
+            const next = header.parentElement?.querySelector('*:last-child');
+            return next ? next.innerText?.trim() : null;
+        }
+        return null;
+    }""")
+    print(f"[usage] USED CREDITS: {credits}")
+
+    # Click Workspace tab/link
+    try:
+        page.click('a[href*="workspace"], button:has-text("Workspace"), a:has-text("Workspace")', timeout=5000)
+        log("✓", "Clicked Workspace", "green")
+    except Exception:
+        log("!", "Workspace link not found", "yellow")
+
+    page.goto("https://app.codeanywhere.com/", timeout=30000)
+    page.wait_for_load_state("networkidle", timeout=30000)
 
 
 def open_dashboard(context: BrowserContext, cookies_file: str, session_name: str) -> Page:
@@ -159,6 +198,7 @@ def open_dashboard(context: BrowserContext, cookies_file: str, session_name: str
         log("✓", "Cookies valid, continuing...", "green")
         _dump_elements(page, session_name)
         log("✓", "Session ready, continuing...", "green")
+        _check_usage(page)
         page.wait_for_timeout(3000)
 
     return page
@@ -208,7 +248,6 @@ def relogin(page: Page, context: BrowserContext, cookies_file: str):
     email, password = _read_credentials(cookies_file)
     if not email:
         log("!", "Could not find email in meta file", "red")
-        input("expired — manual login, then press Enter")
         return
 
     log("~", f"Auto-filling email: {email}", "yellow")
@@ -218,11 +257,10 @@ def relogin(page: Page, context: BrowserContext, cookies_file: str):
 
 
 def check_next_step(page: Page):
-    # Dump HTML for next step analysis
-    html_content = page.content()
-    with open("next_5_step_dump.html", "w") as f:
-        f.write(html_content)
-    log("~", "HTML dumped to next_5_step_dump.html", "yellow")
+    # html_content = page.content()
+    # with open("next_5_step_dump.html", "w") as f:
+    #     f.write(html_content)
+    # log("~", "HTML dumped to next_5_step_dump.html", "yellow")
     log("✓", "Proceeding to Step 5", "green")
 
 
@@ -235,15 +273,15 @@ def _click_continue(page: Page):
         log("✓", "Clicked Continue", "green")
     except Exception as e:
         log("!", f"Continue button not found: {e}", "red")
-        buttons = page.evaluate("""() =>
-            Array.from(document.querySelectorAll('button')).map(b => ({
-                type: b.type, class: b.className, text: b.innerText?.trim()
-            }))
-        """)
-        dump_path = os.path.join(os.path.dirname(__file__), "dump_buttons.json")
-        with open(dump_path, "w") as f:
-            json.dump(buttons, f, indent=2)
-        log("~", f"Buttons dumped to {dump_path}", "yellow")
+        # buttons = page.evaluate("""() =>
+        #     Array.from(document.querySelectorAll('button')).map(b => ({
+        #         type: b.type, class: b.className, text: b.innerText?.trim()
+        #     }))
+        # """)
+        # dump_path = os.path.join(os.path.dirname(__file__), "dump_buttons.json")
+        # with open(dump_path, "w") as f:
+        #     json.dump(buttons, f, indent=2)
+        # log("~", f"Buttons dumped to {dump_path}", "yellow")
         raise
 
 
@@ -340,7 +378,6 @@ def open_vscode(page: Page, context: BrowserContext) -> Page:
     # Wait for any navigation to settle
     vs_page.wait_for_load_state("networkidle", timeout=60000)
 
-    # Dump vs_page
     elements = vs_page.evaluate("""() =>
         Array.from(document.querySelectorAll('*')).map(el => ({
             tag: el.tagName, id: el.id || null,
@@ -348,10 +385,10 @@ def open_vscode(page: Page, context: BrowserContext) -> Page:
             text: el.innerText?.slice(0, 100) || null,
         }))
     """)
-    dump_path = os.path.join(os.path.dirname(__file__), "dump_vscode_tab.json")
-    with open(dump_path, "w") as f:
-        json.dump(elements, f, indent=2)
-    log("~", f"VS Code tab dumped to {dump_path}", "yellow")
+    # dump_path = os.path.join(os.path.dirname(__file__), "dump_vscode_tab.json")
+    # with open(dump_path, "w") as f:
+    #     json.dump(elements, f, indent=2)
+    # log("~", f"VS Code tab dumped to {dump_path}", "yellow")
 
     deadline = time.time() + 120
     while any("Setting up your workspace" in (el.get("text") or "") for el in elements):
@@ -360,75 +397,41 @@ def open_vscode(page: Page, context: BrowserContext) -> Page:
             raise RuntimeError("Workspace setup timeout")
         log("~", "Workspace still setting up, waiting 30s...", "yellow")
         
-        # Check workspace setup state
         setup_elements = vs_page.evaluate("""() => {
             const setupMsg = document.querySelector('.WorkspaceLogs_top-level-message__zu6NS');
-            const terminalContainer = document.querySelector('.terminals-container');
-            return {
-                setupMessage: setupMsg ? setupMsg.innerText : null,
-                hasTerminalContainer: !!terminalContainer,
-                setupPhase: setupMsg ? 'initialization' : 'unknown'
-            };
+            return { setupMessage: setupMsg ? setupMsg.innerText : null };
         }""")
-        
-        print(f"[debug] Workspace Setup State:")
+
         print(f"  - Main message: \"{setup_elements.get('setupMessage')}\"")
-        print(f"  - Status: Workspace is in {setup_elements.get('setupPhase')} phase")
-        print(f"  - Terminal container present: {setup_elements.get('hasTerminalContainer')}")
-        
-        # Display terminal text and all page text
-        page_content = vs_page.evaluate("""() => {
-            // Get terminal text from canvas or text elements
-            const terminalTexts = Array.from(document.querySelectorAll('.xterm-text-layer, .terminal, .xterm-screen')).map(el => el.innerText).filter(text => text && text.trim());
-            
-            // Get all visible text from page
-            const allText = Array.from(document.querySelectorAll('*')).map(el => el.innerText).filter(text => text && text.trim() && text.length > 3);
-            
-            return {
-                terminalTexts: terminalTexts,
-                allPageText: [...new Set(allText)].slice(0, 10) // Remove duplicates, limit to 10
-            };
-        }""")
-        
-        if page_content.get('terminalTexts'):
-            print(f"[debug] Terminal text found:")
-            for i, text in enumerate(page_content.get('terminalTexts')[:3]):  # Show first 3
-                print(f"  Terminal {i+1}: {text[:100]}...")
-        
-        print(f"[debug] All page text (first 5):")
-        for i, text in enumerate(page_content.get('allPageText', [])[:5]):
-            print(f"  {i+1}: {text[:80]}...")
-        
-        # Check for "Setup is taking longer than usual" and refresh if found
+
         if setup_elements.get('setupMessage') and "Setup is taking longer than usual" in setup_elements.get('setupMessage'):
             log("!", "Setup taking longer than usual - refreshing page...", "yellow")
             vs_page.reload()
             vs_page.wait_for_load_state("networkidle", timeout=60000)
             continue
         
-        # Dump HTML and fetch tests
-        html_content = vs_page.content()
-        with open("workspace_dump.html", "w") as f:
-            f.write(html_content)
+        # html_content = vs_page.content()
+        # with open("workspace_dump.html", "w") as f:
+        #     f.write(html_content)
         
-        tests = vs_page.evaluate("""() => {
-            const testElements = Array.from(document.querySelectorAll('*')).filter(el => 
-                el.innerText && (el.innerText.toLowerCase().includes('test') || 
-                el.className.toLowerCase().includes('test') || 
-                el.id.toLowerCase().includes('test'))
-            );
-            return testElements.map(el => ({
-                tag: el.tagName,
-                text: el.innerText?.slice(0, 50),
-                class: el.className,
-                id: el.id
-            }));
-        }""")
+        # tests = vs_page.evaluate("""() => {
+        #     const testElements = Array.from(document.querySelectorAll('*')).filter(el =>
+        #         el.innerText && (el.innerText.toLowerCase().includes('test') ||
+        #         el.className.toLowerCase().includes('test') ||
+        #         el.id.toLowerCase().includes('test'))
+        #     );
+        #     return testElements.map(el => ({
+        #         tag: el.tagName,
+        #         text: el.innerText?.slice(0, 50),
+        #         class: el.className,
+        #         id: el.id
+        #     }));
+        # }""")
         
-        if tests:
-            print(f"[debug] Found {len(tests)} test elements:")
-            for test in tests[:5]:  # Print first 5
-                print(f"  {test['tag']}: {test['text']} (class: {test['class']}, id: {test['id']})")
+        # if tests:
+        #     print(f"[debug] Found {len(tests)} test elements:")
+        #     for test in tests[:5]:
+        #         print(f"  {test['tag']}: {test['text']} (class: {test['class']}, id: {test['id']})")
         
         time.sleep(30)
         elements = vs_page.evaluate("""() =>
@@ -606,7 +609,19 @@ def main():
             wait_workspace_ready(vs_page)                                     # step 7
             cx, cy    = click_terminal(vs_page)                              # step 8
             run_init_command(vs_page, cx, cy)                                 # step 9
-            wait_end(vs_page, page)                                           # step 10
+            # wait_end(vs_page, page)                                         # step 10
+
+            # Step 11: loop until terminn.png disappears
+            terminn = _load_template("terminn.png")
+            while True:
+                screen = _screenshot(vs_page)
+                val, _ = _match(screen, terminn)
+                print(f"[debug] terminn match score: {val:.3f}", flush=True)
+                if val < 0.8:
+                    log("✓", "terminn.png not found — closing and exiting", "green")
+                    break
+                log("~", "terminn.png found — sleeping 5 min...", "yellow")
+                time.sleep(300)
         except Exception as e:
             log("!", f"Fatal error: {e}", "red")
             raise

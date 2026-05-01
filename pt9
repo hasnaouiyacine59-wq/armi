@@ -1,2 +1,0 @@
-docker pull quay.io/mylastres0rt05_redhat/nova_dromidia-proxy:latest
-docker tag quay.io/mylastres0rt05_redhat/nova_dromidia-proxy:latest tor-proxy
