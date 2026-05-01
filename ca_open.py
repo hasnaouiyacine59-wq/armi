@@ -130,6 +130,10 @@ def _dump_elements(page: Page, session_name: str):
     if any("ARCHIVED" in (el.get("text") or "") for el in elements):
         log("!", "Workspace ARCHIVED detected — deleting...", "yellow")
         _delete_started_workspace(page)
+    
+    if any("ERROR" in (el.get("text") or "") for el in elements):
+        log("!", "Workspace ERROR detected — deleting...", "yellow")
+        _delete_started_workspace(page)
 
 
 def _is_session_expired(page: Page) -> bool:
