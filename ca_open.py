@@ -617,15 +617,28 @@ def main():
 
             # Step 11: loop until terminn.png disappears
             terminn = _load_template("terminn.png")
-            while True:
-                screen = _screenshot(vs_page)
-                val, _ = _match(screen, terminn)
-                print(f"[debug] terminn match score: {val:.3f}", flush=True)
-                if val < 0.8:
-                    log("✓", "terminn.png not found — closing and exiting", "green")
-                    break
-                log("~", "terminn.png found — sleeping 5 min...", "yellow")
-                time.sleep(300)
+            if terminn is None:
+                log("!", "terminn.png not found in src/ — skipping step 11", "yellow")
+            else:
+                # Wait until terminn.png is first seen
+                log("~", "Waiting for terminn.png to appear...", "yellow")
+                while True:
+                    screen = _screenshot(vs_page)
+                    val, _ = _match(screen, terminn)
+                    if val >= 0.8:
+                        log("✓", f"terminn.png appeared (score={val:.2f})", "green")
+                        break
+                    time.sleep(5)
+                # Now wait until it disappears
+                while True:
+                    screen = _screenshot(vs_page)
+                    val, _ = _match(screen, terminn)
+                    print(f"[debug] terminn match score: {val:.3f}", flush=True)
+                    if val < 0.8:
+                        log("✓", "terminn.png gone — closing and exiting", "green")
+                        break
+                    log("~", "terminn.png found — sleeping 5 min...", "yellow")
+                    time.sleep(300)
         except Exception as e:
             log("!", f"Fatal error: {e}", "red")
             raise
