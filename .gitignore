@@ -3,3 +3,5 @@ __pycache__/
 accounts.txt
 sessions/
 ca_cookies_*.json
+dump_*.json
+*.json
