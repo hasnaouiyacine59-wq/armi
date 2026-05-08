@@ -381,7 +381,7 @@ def open_vscode(page: Page, context: BrowserContext) -> Page:
     #     json.dump(elements, f, indent=2)
     # log("~", f"VS Code tab dumped to {dump_path}", "yellow")
 
-    while any("Setting up your workspace" in (el.get("text") or "") for el in elements):
+    while any(("Setting up your workspace" in (el.get("text") or "") or "Setup is taking longer than usual" in (el.get("text") or "")) for el in elements):
         log("~", "Workspace still setting up, waiting 30s...", "yellow")
         
         setup_elements = vs_page.evaluate("""() => {
