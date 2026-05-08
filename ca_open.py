@@ -381,11 +381,7 @@ def open_vscode(page: Page, context: BrowserContext) -> Page:
     #     json.dump(elements, f, indent=2)
     # log("~", f"VS Code tab dumped to {dump_path}", "yellow")
 
-    deadline = time.time() + 120
     while any("Setting up your workspace" in (el.get("text") or "") for el in elements):
-        if time.time() > deadline:
-            log("!", "Workspace setup exceeded 2 minutes, exiting.", "red")
-            raise RuntimeError("Workspace setup timeout")
         log("~", "Workspace still setting up, waiting 30s...", "yellow")
         
         setup_elements = vs_page.evaluate("""() => {
@@ -396,35 +392,10 @@ def open_vscode(page: Page, context: BrowserContext) -> Page:
         print(f"  - Main message: \"{setup_elements.get('setupMessage')}\"")
 
         if setup_elements.get('setupMessage') and "Setup is taking longer than usual" in setup_elements.get('setupMessage'):
-            log("!", "Setup taking longer than usual - refreshing page...", "yellow")
-            vs_page.reload()
-            vs_page.wait_for_load_state("networkidle", timeout=60000)
-            continue
-        
-        # html_content = vs_page.content()
-        # with open("workspace_dump.html", "w") as f:
-        #     f.write(html_content)
-        
-        # tests = vs_page.evaluate("""() => {
-        #     const testElements = Array.from(document.querySelectorAll('*')).filter(el =>
-        #         el.innerText && (el.innerText.toLowerCase().includes('test') ||
-        #         el.className.toLowerCase().includes('test') ||
-        #         el.id.toLowerCase().includes('test'))
-        #     );
-        #     return testElements.map(el => ({
-        #         tag: el.tagName,
-        #         text: el.innerText?.slice(0, 50),
-        #         class: el.className,
-        #         id: el.id
-        #     }));
-        # }""")
-        
-        # if tests:
-        #     print(f"[debug] Found {len(tests)} test elements:")
-        #     for test in tests[:5]:
-        #         print(f"  {test['tag']}: {test['text']} (class: {test['class']}, id: {test['id']})")
-        
-        time.sleep(30)
+            log("~", "Workspace still setting up, waiting 120s...", "yellow")
+            time.sleep(120)
+        else:
+            time.sleep(30)
         elements = vs_page.evaluate("""() =>
             Array.from(document.querySelectorAll('*')).map(el => ({
                 tag: el.tagName, text: el.innerText?.slice(0, 100) || null,
