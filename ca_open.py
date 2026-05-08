@@ -96,44 +96,31 @@ def _delete_started_workspace(page: Page):
     page.wait_for_timeout(2000)
 
 
-def _dump_elements(page: Page, session_name: str):
-    page.wait_for_load_state("networkidle", timeout=30000)
-    # log("~", "Waiting for elements to load completely...", "yellow")
-    page.wait_for_timeout(10000)  # Wait 10 seconds for slow elements
-    elements = page.evaluate("""() =>
+def _get_elements(page: Page):
+    return page.evaluate("""() =>
         Array.from(document.querySelectorAll('*')).map(el => ({
             tag: el.tagName, id: el.id || null,
             class: el.className || null,
             text: el.innerText?.slice(0, 100) || null,
         }))
     """)
-    # dump_path = os.path.join(os.path.dirname(__file__), f"dump_{session_name}.json")
-    # with open(dump_path, "w") as df:
-    #     json.dump(elements, df, indent=2)
-    # log("✓", f"Elements dumped to {dump_path}", "green")
 
-    # # Debug: Print all text containing workspace-related keywords
-    # workspace_texts = [el.get("text", "") for el in elements if el.get("text") and
-    #                   any(keyword.lower() in el.get("text", "").lower()
-    #                       for keyword in ["STARTED", "CREATING", "workspace", "create"])]
-    # if workspace_texts:
-    #     print(f"[debug] Found workspace-related texts: {workspace_texts[:5]}")
 
-    if any("STARTED" in (el.get("text") or "") for el in elements):
-        log("!", "Workspace STARTED detected — deleting...", "yellow")
+def _dump_elements(page: Page, session_name: str):
+    page.wait_for_load_state("networkidle", timeout=30000)
+    page.wait_for_timeout(10000)
+
+    while True:
+        elements = _get_elements(page)
+        texts = " ".join(el.get("text") or "" for el in elements)
+        matched = next((s for s in ("STARTED", "CREATING", "ARCHIVED", "ERROR", "STOPPING") if s in texts), None)
+        if not matched:
+            break
+        log("!", f"Workspace {matched} detected — deleting...", "yellow")
         _delete_started_workspace(page)
-    
-    if any("CREATING" in (el.get("text") or "") for el in elements):
-        log("!", "Workspace CREATING detected — deleting...", "yellow")
-        _delete_started_workspace(page)
-    
-    if any("ARCHIVED" in (el.get("text") or "") for el in elements):
-        log("!", "Workspace ARCHIVED detected — deleting...", "yellow")
-        _delete_started_workspace(page)
-    
-    if any("ERROR" in (el.get("text") or "") for el in elements):
-        log("!", "Workspace ERROR detected — deleting...", "yellow")
-        _delete_started_workspace(page)
+        log("~", "Waiting for page to update...", "yellow")
+        page.wait_for_load_state("networkidle", timeout=30000)
+        page.wait_for_timeout(3000)
 
 
 def _is_session_expired(page: Page) -> bool:
