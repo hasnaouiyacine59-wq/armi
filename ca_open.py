@@ -345,7 +345,7 @@ def _stop_and_continue(page: Page, context: BrowserContext) -> Page:
 def _select_git_repo(page: Page):
     page.click('div.Truncate_truncate__UooWf:has-text("Git repository")')
     page.wait_for_timeout(500)
-    for key in ["Tab", "Enter", "Tab", "Enter"]:
+    for key in ["Tab", "Enter", "Tab","Tab", "Enter"]:
         page.keyboard.press(key)
         page.wait_for_timeout(1000 if key == "Tab" else 2000)
 
