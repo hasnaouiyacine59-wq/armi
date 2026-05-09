@@ -7,3 +7,4 @@ psutil
 SpeechRecognition
 camoufox[geoip]
 pyhub
+SpeechRecognition

