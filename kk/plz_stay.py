@@ -114,6 +114,17 @@ with Camoufox(
                     print(f"[+] Sent: {cmd}")
                     time.sleep(2)
 
+                # Accept cookies if banner appears
+                try:
+                    accept_btn = page.wait_for_selector(
+                        "button:has-text('Accept'), button:has-text('Accept all'), button:has-text('Accept cookies'), [id*='accept'], [class*='accept']",
+                        timeout=5000
+                    )
+                    accept_btn.click()
+                    print("[+] Accepted cookies")
+                except Exception:
+                    pass
+
         # Sleep 50 minutes then repeat
         print("[+] Sleeping 50 minutes before revisiting...")
         time.sleep(58 * 60)
