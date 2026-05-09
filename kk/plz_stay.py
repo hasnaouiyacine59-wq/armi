@@ -116,5 +116,5 @@ with Camoufox(
 
         # Sleep 50 minutes then repeat
         print("[+] Sleeping 50 minutes before revisiting...")
-        time.sleep(50 * 60)
+        time.sleep(58 * 60)
         print("[+] Revisiting lab URL...")
