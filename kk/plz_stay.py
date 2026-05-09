@@ -114,6 +114,76 @@ with Camoufox(
                     print(f"[+] Sent: {cmd}")
                     time.sleep(2)
 
+                # Dump all elements and search for discord/logout
+                time.sleep(3)
+                all_elements = page.query_selector_all("*")
+                dump = []
+                keywords = ["discord", "logout", "log out", "sign out"]
+                for el in all_elements:
+                    try:
+                        tag = el.evaluate("e => e.tagName.toLowerCase()")
+                        text = el.inner_text().strip()[:200]
+                        attrs = el.evaluate("""e => {
+                            let o = {};
+                            for (let a of e.attributes) o[a.name] = a.value;
+                            return o;
+                        }""")
+                        entry = {"tag": tag, "text": text, "attrs": attrs}
+                        dump.append(entry)
+                    except Exception:
+                        pass
+
+                with open("post_cmd_dump.json", "w") as f:
+                    json.dump(dump, f, indent=2)
+                print(f"[+] Dumped {len(dump)} elements to post_cmd_dump.json")
+
+                matches = [e for e in dump if any(k in (e["text"] + str(e["attrs"])).lower() for k in keywords)]
+                print(f"[+] Found {len(matches)} element(s) matching discord/logout:")
+                for m in matches:
+                    print(f"    <{m['tag']}> text={m['text']!r} attrs={m['attrs']}")
+
+                # --- Click "Exit Scenario" ---
+                try:
+                    print("[+] Clicking Exit Scenario button...")
+                    exit_btn = page.wait_for_selector("[title='Exit Scenario']", timeout=10000)
+                    exit_btn.click()
+                    print("[+] Clicked Exit Scenario")
+                except Exception as e:
+                    print(f"[-] Exit Scenario button not found: {e}")
+
+                # Wait, dump, search for EXIT, click it
+                time.sleep(3)
+                exit_elements = page.query_selector_all("*")
+                exit_dump = []
+                for el in exit_elements:
+                    try:
+                        tag = el.evaluate("e => e.tagName.toLowerCase()")
+                        text = el.inner_text().strip()[:200]
+                        attrs = el.evaluate("""e => {
+                            let o = {};
+                            for (let a of e.attributes) o[a.name] = a.value;
+                            return o;
+                        }""")
+                        exit_dump.append({"tag": tag, "text": text, "attrs": attrs, "el": el})
+                    except Exception:
+                        pass
+
+                with open("exit_dump.json", "w") as f:
+                    json.dump([{k: v for k, v in e.items() if k != "el"} for e in exit_dump], f, indent=2)
+                print(f"[+] Dumped {len(exit_dump)} elements to exit_dump.json")
+
+                exit_matches = [e for e in exit_dump if "exit" in (e["text"] + str(e["attrs"])).lower()]
+                print(f"[+] Found {len(exit_matches)} element(s) matching EXIT:")
+                for m in exit_matches:
+                    print(f"    <{m['tag']}> text={m['text']!r} attrs={m['attrs']}")
+
+                try:
+                    ok_btn = page.wait_for_selector("button.dg-btn.dg-btn--ok.dg-pull-right", timeout=5000)
+                    ok_btn.click()
+                    print("[+] Clicked Exit confirmation button")
+                except Exception as e:
+                    print(f"[-] Could not click Exit confirmation button: {e}")
+
                 # Accept cookies if banner appears
                 try:
                     accept_btn = page.wait_for_selector(
@@ -125,7 +195,7 @@ with Camoufox(
                 except Exception:
                     pass
 
-        # Sleep 50 minutes then repeat
-        print("[+] Sleeping 50 minutes before revisiting...")
-        time.sleep(58 * 60)
+        # Sleep 60 minutes then repeat
+        print("[+] Sleeping 60 minutes before revisiting...")
+        time.sleep(60 * 60)
         print("[+] Revisiting lab URL...")
