@@ -74,6 +74,8 @@ with Camoufox(
                 print(f"  retrying... ({attempt+1}/60)")
             else:
                 print("[-] Terminal frame never found")
+                import sys
+                sys.exit()
 
             if terminal_frame:
                 terminal_frame.wait_for_selector(".xterm-helper-textarea", timeout=60000)
@@ -108,6 +110,8 @@ with Camoufox(
                 print("[+] Clicked Exit Scenario")
             except Exception as e:
                 print(f"[-] Exit Scenario button not found: {e}")
+                import sys
+                sys.exit()
             try:
                 page.wait_for_selector("button.dg-btn.dg-btn--ok.dg-pull-right", timeout=5000).click()
                 print("[+] Clicked Exit confirmation")
