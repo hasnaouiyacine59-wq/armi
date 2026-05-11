@@ -1,2 +1,3 @@
 camoufox
 browserforge
+camoufox[geoip]
