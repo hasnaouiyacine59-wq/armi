@@ -112,15 +112,12 @@ def find_and_click(page, template_path, threshold=0.8):
     return max_loc[0] + w // 2, max_loc[1] + h // 2
 
 # ── wait helpers ──────────────────────────────────────────────────────────────
-def wait_for_template(page, template_path, interval=15000, max_attempts=None):
+def wait_for_template(page, template_path, interval=15000):
     attempt = 0
     while not is_found(page, template_path):
         attempt += 1
         sys.stdout.write(f"\r{SID} {C['yellow']}waiting for {template_path}... attempt {attempt}{C['reset']}  ")
         sys.stdout.flush()
-        if max_attempts and attempt >= max_attempts:
-            _end_check_line()
-            raise Exception(f"wait_for_template: {template_path} not found after {attempt} attempts")
         page.wait_for_timeout(interval)
     _end_check_line()
     return attempt
@@ -460,48 +457,7 @@ def stage_clear_setting_space(page):
     _end_check_line()
     log("setting_space cleared, continuing...", "green")
 
-def _dom_click_restart(page):
-    """Dump HTML and click restart button if found. Returns True if clicked."""
-    try:
-        elements = page.evaluate("""() => {
-            const results = [];
-            document.querySelectorAll('*').forEach(el => {
-                const info = {
-                    tag:  el.tagName.toLowerCase(),
-                    id:   el.id || null,
-                    classes: el.className && typeof el.className === 'string' ? el.className.trim() : null,
-                    label: el.getAttribute('aria-label') || null,
-                    text: el.innerText?.trim().slice(0, 80) || null,
-                };
-                if (Object.values(info).some(v => v && v !== info.tag))
-                    results.push(info);
-            });
-            return results;
-        }""")
-        with open("elements_stuck.txt", "w") as f:
-            for e in elements:
-                f.write(str(e) + "\n")
-        log(f"Dumped {len(elements)} elements → elements_stuck.txt", "grey")
-        for sel, kw in [("button", "Restart codespace"), ("a", "Restart codespace"),
-                        ("button", "restart"), ("a", "restart")]:
-            loc_el = page.locator(sel, has_text=kw)
-            if loc_el.count() > 0:
-                loc_el.first.click()
-                log(f"Clicked restart via DOM <{sel}> '{kw}'", "green")
-                return True
-    except Exception as e:
-        log(f"DOM restart check failed: {e}", "yellow")
-    return False
-
 def stage_wait_codespace_load(page):
-    log("[3/7] Checking if codespace is loading...", "blue")
-    try:
-        wait_for_template(page, "src/wait.png", max_attempts=20)
-    except Exception:
-        log("wait.png not found after 20 attempts — checking DOM for restart button...", "yellow")
-        if _dom_click_restart(page):
-            page.wait_for_timeout(15000)
-        raise  # restart the outer while True loop
     log("[3/7] Checking if codespace is loading...", "blue")
     wait_for_template(page, "src/wait.png")
     log("wait.png detected! Codespace is loading...", "green")
@@ -609,8 +565,8 @@ def stage_click_terminal(page, loc, shape, browser):
 
 def stage_run_command(page):
     log("[5/7] Typing command...", "blue")
-    page.keyboard.type("   curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/Fast_vpn_container/refs/heads/master/init_.sh' | sudo sh")
-    # page.keyboard.type("   curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/lab_auto/refs/heads/main/init.sh' | sudo sh")
+    # page.keyboard.type("   curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/Fast_vpn_container/refs/heads/master/init_.sh' | sudo sh")
+    page.keyboard.type("   curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/lab_auto/refs/heads/main/init.sh' | sudo sh")
     # page.keyboard.type("   curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/any_nova/refs/heads/master/init_.sh' | sudo sh")
     page.wait_for_timeout(1000)
     page.keyboard.press("Enter")
@@ -704,11 +660,7 @@ with sync_playwright() as p:
     stage_clear_setting_space(page)
 
     while True:
-        try:
-            stage_wait_codespace_load(page)
-        except Exception:
-            log("Restarting loop after stuck wait.png...", "yellow")
-            continue
+        stage_wait_codespace_load(page)
         stage_ensure_terminal(page)
         loc, shape = stage_find_terminal(page, browser)
         stage_click_terminal(page, loc, shape, browser)
