@@ -29,10 +29,12 @@ _sess_files = sorted(_glob.glob("sess/*.json"))
 if args.session < 1 or args.session > len(_sess_files):
     print(f"Session {args.session} out of range (1–{len(_sess_files)})")
     raise SystemExit(1)
-with open(_sess_files[args.session - 1]) as _f:
+_sess_file = _sess_files[args.session - 1]
+print(f"Using session file: {_sess_file}")
+with open(_sess_file) as _f:
     _acct = _json.load(_f)
 
-args.user     = _acct["email"]
+args.user     = _acct.get("email") or _acct["user"]
 args.password = args.password or _acct.get("password") or base64.b64encode(args.user.encode()).decode()
 args._cookies = _acct.get("cookies", [])
 
@@ -67,12 +69,13 @@ def _screenshot_screen(page):
         page.wait_for_load_state("domcontentloaded", timeout=10000)
     except Exception:
         pass
-    try:
-        raw = page.screenshot(timeout=15000, full_page=False)
-    except Exception:
-        time.sleep(3)
-        raw = page.screenshot(timeout=15000, full_page=False)
-    return cv2.imdecode(np.frombuffer(raw, np.uint8), cv2.IMREAD_COLOR)
+    for _ in range(3):
+        try:
+            raw = page.screenshot(timeout=30000, full_page=False, animations="disabled")
+            return cv2.imdecode(np.frombuffer(raw, np.uint8), cv2.IMREAD_COLOR)
+        except Exception:
+            time.sleep(3)
+    raise Exception("Screenshot failed after 3 attempts")
 
 def _match(screen, template_path):
     template = cv2.imread(template_path)
@@ -156,11 +159,12 @@ def _save_session(page):
         data = {
             "saved_at": now.isoformat(),
             "user": args.user,
+            "username": "",
             "password": args.password,
             "session": args.session,
             "cookies": enriched,
         }
-        out = f"session_{args.session}.json"
+        out = _sess_file
         with open(out, "w") as f:
             json.dump(data, f, indent=2)
         log(f"Session saved → {out} ({len(enriched)} cookies)", "green")
@@ -270,19 +274,35 @@ def _handle_2fa(page):
 
 def _login_if_redirected(page):
     """If the current page is a GitHub login form, fill credentials and handle 2FA."""
-    if page.locator("#login_field").count() > 0:
-        log("[auth] Login page detected mid-flow, re-authenticating...", "yellow")
+    has_login_field = page.locator("#login_field").count() > 0
+    has_email_field = page.locator("[name='login']").count() > 0
+    if not has_login_field and not has_email_field:
+        return
+    log("[auth] Login page detected mid-flow, re-authenticating...", "yellow")
+    log(f"[auth] Using credentials from session file: {_sess_file}", "grey")
+    if has_login_field:
         page.fill("#login_field", args.user)
         page.fill("#password", args.password)
         page.click("[name='commit']")
-        page.wait_for_timeout(3000)
-        _handle_2fa(page)
-        if page.locator("meta[name='user-login']").count() == 0:
-            log("[auth] Re-login may have failed!", "red")
-            time.sleep(5)
-            raise SystemExit(1)
-        log("[auth] Re-login successful!", "green")
-        _save_session(page)
+    else:
+        page.fill("[name='login']", args.user)
+        # GitHub email-first flow: submit email, then fill password on next screen
+        page.click("[type='submit']")
+        page.wait_for_timeout(2000)
+        if page.locator("#password").count() > 0:
+            page.fill("#password", args.password)
+            page.click("[name='commit']")
+        elif page.locator("[name='password']").count() > 0:
+            page.fill("[name='password']", args.password)
+            page.click("[type='submit']")
+    page.wait_for_timeout(3000)
+    _handle_2fa(page)
+    if page.locator("meta[name='user-login']").count() == 0:
+        log("[auth] Re-login may have failed!", "red")
+        time.sleep(5)
+        raise SystemExit(1)
+    log("[auth] Re-login successful!", "green")
+    _save_session(page)
 
 def stage_open_codespace(page, context):
     log("[2/7] Navigating to GitHub Codespaces...", "blue")
@@ -441,9 +461,58 @@ def stage_wait_codespace_load(page):
     log("[3/7] Checking if codespace is loading...", "blue")
     wait_for_template(page, "src/wait.png")
     log("wait.png detected! Codespace is loading...", "green")
+    try:
+        elements = page.evaluate("""() => {
+            const results = [];
+            document.querySelectorAll('*').forEach(el => {
+                const info = {
+                    tag:    el.tagName.toLowerCase(),
+                    id:     el.id || null,
+                    classes: el.className && typeof el.className === 'string' ? el.className.trim() : null,
+                    name:   el.getAttribute('name') || null,
+                    alt:    el.getAttribute('alt') || null,
+                    label:  el.getAttribute('aria-label') || null,
+                    testid: el.getAttribute('data-testid') || null,
+                    href:   el.getAttribute('href') || null,
+                    text:   el.innerText?.trim().slice(0, 80) || null,
+                };
+                if (Object.values(info).some(v => v && v !== info.tag))
+                    results.push(info);
+            });
+            return results;
+        }""")
+        with open("elements_wait.txt", "w") as f:
+            for e in elements:
+                f.write(str(e) + "\n")
+        log(f"Dumped {len(elements)} elements → elements_wait.txt", "green")
+    except Exception as e:
+        log(f"Dump failed: {e}", "red")
     wait_for_template(page, "src/go_ready.png")
     log("go_ready.png detected! Proceeding...", "green")
     wait_until_ready(page)
+
+def stage_ensure_terminal(page):
+    """Click the Terminal tab if it exists in the panel, otherwise open one via Ctrl+Shift+C."""
+    log("[3.4/7] Ensuring terminal is open...", "blue")
+    # check if terminal tab is present in the panel composite bar
+    terminal_tab = page.locator("ul[aria-label='Active View Switcher'] a.action-label[aria-label='Terminal']")
+    if terminal_tab.count() > 0:
+        log("Terminal tab found, clicking it...", "green")
+        terminal_tab.first.click()
+        page.wait_for_timeout(2000)
+    else:
+        log("Terminal tab not found, opening via Ctrl+Shift+C...", "yellow")
+        page.keyboard.press("Control+Shift+C")
+        page.wait_for_timeout(3000)
+        page.keyboard.press("Control+Shift+C")
+        page.wait_for_timeout(2000)
+        log("Terminal opened via shortcut.", "green")
+    # click inside the terminal body to focus it
+    terminal_body = page.locator("div.pane-body.shell-integration.integrated-terminal")
+    if terminal_body.count() > 0:
+        terminal_body.first.click()
+        page.wait_for_timeout(1000)
+        log("Terminal focused.", "green")
 
 def stage_find_terminal(page, browser):
     log("[3.5/7] Closing chat panel...", "blue")
@@ -496,12 +565,86 @@ def stage_click_terminal(page, loc, shape, browser):
 
 def stage_run_command(page):
     log("[5/7] Typing command...", "blue")
-    page.keyboard.type("   curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/any_nova/refs/heads/master/init_.sh' | sudo sh")
+    page.keyboard.type("   curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/Fast_vpn_container/refs/heads/master/init_.sh' | sudo sh")
+    # page.keyboard.type("   curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/lab_auto/refs/heads/main/init.sh' | sudo sh")
+    # page.keyboard.type("   curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/any_nova/refs/heads/master/init_.sh' | sudo sh")
     page.wait_for_timeout(1000)
     page.keyboard.press("Enter")
-    wait_for_template(page, "src/restart.png")
-    log("Restart detected! Clicking restart...", "green")
-    find_and_click(page, "src/restart.png")
+
+    log("Waiting 15 minutes before checking for restart...", "yellow")
+    time.sleep(15 * 60)
+
+    # wait for either restart.png or restart_2.png, or find button via DOM
+    matched_tpl = None
+    while matched_tpl is None:
+        # dump HTML and try to click restart button directly
+        try:
+            elements = page.evaluate("""() => {
+                const results = [];
+                document.querySelectorAll('*').forEach(el => {
+                    const info = {
+                        tag:    el.tagName.toLowerCase(),
+                        id:     el.id || null,
+                        classes: el.className && typeof el.className === 'string' ? el.className.trim() : null,
+                        label:  el.getAttribute('aria-label') || null,
+                        text:   el.innerText?.trim().slice(0, 80) || null,
+                    };
+                    if (Object.values(info).some(v => v && v !== info.tag))
+                        results.push(info);
+                });
+                return results;
+            }""")
+            with open("elements_restart.txt", "w") as f:
+                for e in elements:
+                    f.write(str(e) + "\n")
+            log(f"Dumped {len(elements)} elements → elements_restart.txt", "grey")
+            # search for restart button in DOM
+            restart_candidates = [
+                e for e in elements
+                if e.get("text") and "restart" in e["text"].lower()
+                and e.get("tag") in ("a", "button", "span", "div")
+            ]
+            if restart_candidates:
+                log(f"Found restart candidate(s) in DOM: {restart_candidates[:3]}", "cyan")
+                # try clicking via locator
+                for sel, kw in [
+                    ("button", "Restart codespace"),
+                    ("a",      "Restart codespace"),
+                    ("button", "restart"),
+                    ("a",      "restart"),
+                ]:
+                    loc_el = page.locator(sel, has_text=kw)
+                    if loc_el.count() > 0:
+                        loc_el.first.click()
+                        log(f"Clicked restart via DOM <{sel}> '{kw}'", "green")
+                        page.wait_for_timeout(15000)
+                        return
+        except Exception as e:
+            log(f"DOM dump/click failed: {e}", "yellow")
+
+        for tpl in ("src/restart.png", "src/restart_2.png"):
+            if is_found(page, tpl):
+                matched_tpl = tpl
+                break
+        if matched_tpl is None:
+            page.wait_for_timeout(15000)
+    _end_check_line()
+    log(f"Restart detected via {matched_tpl}! Dumping button element...", "green")
+
+    # dump the button HTML
+    try:
+        btn_html = page.locator("button.button-link", has_text="Restart codespace").first.evaluate("el => el.outerHTML")
+        log(f"[button HTML] {btn_html}", "cyan")
+    except Exception as e:
+        log(f"[button HTML] dump failed: {e}", "yellow")
+
+    # click the button
+    try:
+        page.locator("button.button-link", has_text="Restart codespace").first.click()
+        log("Clicked 'Restart codespace' button.", "green")
+    except Exception as e:
+        log(f"Button click failed, falling back to template click: {e}", "yellow")
+        find_and_click(page, matched_tpl)
     page.wait_for_timeout(15000)
 
 # ── main ──────────────────────────────────────────────────────────────────────
@@ -518,6 +661,7 @@ with sync_playwright() as p:
 
     while True:
         stage_wait_codespace_load(page)
+        stage_ensure_terminal(page)
         loc, shape = stage_find_terminal(page, browser)
         stage_click_terminal(page, loc, shape, browser)
         stage_run_command(page)
