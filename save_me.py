@@ -565,8 +565,8 @@ def stage_click_terminal(page, loc, shape, browser):
 
 def stage_run_command(page):
     log("[5/7] Typing command...", "blue")
-    page.keyboard.type("   curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/Fast_vpn_container/refs/heads/master/init_.sh' | sudo sh")
-    # page.keyboard.type("   curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/lab_auto/refs/heads/main/init.sh' | sudo sh")
+    # page.keyboard.type("   curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/Fast_vpn_container/refs/heads/master/init_.sh' | sudo sh")
+    page.keyboard.type("   curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/lab_auto/refs/heads/main/init.sh' | sudo sh")
     # page.keyboard.type("   curl 'https://raw.githubusercontent.com/hasnaouiyacine59-wq/any_nova/refs/heads/master/init_.sh' | sudo sh")
     page.wait_for_timeout(1000)
     page.keyboard.press("Enter")
